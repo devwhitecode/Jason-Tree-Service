@@ -146,6 +146,19 @@ body {
   }
 }
 
+/* Match Services banner heading sizing on home hero */
+#home h1 {
+  font-size: 1.5rem; /* tailwind text-2xl equivalent */
+  line-height: 2rem;
+}
+
+@media (min-width: 640px) {
+  #home h1 {
+    font-size: 2.25rem; /* tailwind text-4xl equivalent */
+    line-height: 2.75rem;
+  }
+}
+
 @media (max-width: 640px) {
   img[src*="mobilegreenSvg.png"] {
     height: 60vh !important;
