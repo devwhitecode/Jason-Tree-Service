@@ -118,6 +118,13 @@ body {
   outline: 2px solid #fff;
   outline-offset: 2px;
 }
+
+@media (min-width: 1024px) {
+  header > img {
+    width: 10rem !important;
+    height: auto;
+  }
+}
 .swiper-button-prev img,
 .swiper-button-next img {
   display: block;
