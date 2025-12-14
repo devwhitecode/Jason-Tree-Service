@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import WhyChooseSection from "../components/WhyChooseSection";
 import CoreServices from "../components/CoreServices";
 import Banner from "../components/Banner";
@@ -25,7 +26,36 @@ const bulletItems = [
   "Same-Day Free Estimates Available",
 ];
 
-const HomePage = () => (
+const HomePage = () => {
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.innerWidth < 1024) return;
+    const badge = document.querySelector(".hero-badge");
+    const hero = document.getElementById("home");
+    if (!badge || !hero) return;
+    const showBadge = () => {
+      void badge.offsetHeight;
+      badge.classList.add("is-visible");
+    };
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        const entry = entries[0];
+        if (
+          entry?.isIntersecting &&
+          entry.intersectionRatio >= 0.3 &&
+          window.scrollY > 0
+        ) {
+          showBadge();
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
   <div
     className="main text-[#0F0F0F] w-full overflow-hidden"
     style={{
@@ -49,7 +79,7 @@ const HomePage = () => (
             className="w-full h-screen top-0 left-0 sm:hidden"
           />
           <div
-            className="absolute bottom-[8%] right-[13.5%] hidden sm:flex justify-start items-center gap-4 text-white pl-2 py-2 w-[20%]"
+            className="absolute bottom-[8%] right-[13.5%] hidden sm:flex justify-start items-center gap-4 text-white pl-2 py-2 w-[20%] hero-badge"
             style={{
               backgroundImage: `url(${heroBadge})`,
               backgroundRepeat: "no-repeat",
@@ -145,7 +175,8 @@ const HomePage = () => (
       <Footer />
     </section>
   </div>
-);
+  );
+};
 
 export default HomePage;
 

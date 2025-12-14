@@ -181,4 +181,34 @@ body {
   }
 }
 
+@keyframes badge-slide-in {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .absolute.bottom-\[8%\].right-\[13\.5%\].hidden.sm\:flex {
+    animation: badge-slide-in 0.7s ease-out forwards;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-badge {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: transform 1.3s ease-out 0.1s, opacity 1.3s ease-out 0.1s;
+  }
+
+  .hero-badge.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
