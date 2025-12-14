@@ -1,3 +1,21 @@
+.leaf-float {
+  position: absolute;
+  z-index: 5;
+  pointer-events: auto;
+  will-change: transform;
+  transform-origin: center;
+  --leaf-scroll: 0px;
+  --leaf-hover-y: 0px;
+  --leaf-hover-rotate: 0deg;
+  transform: translateY(calc(var(--leaf-scroll, 0px) + var(--leaf-hover-y, 0px)))
+    rotate(var(--leaf-hover-rotate, 0deg));
+}
+
+.leaf-float:hover {
+  --leaf-hover-y: -6px;
+  --leaf-hover-rotate: -4deg;
+  transition: transform 0.4s ease-out;
+}
 @font-face {
   font-family: "Akira";
   src: url("../../Jasons Tree/assets/fonts/Akira Expanded Demo.otf")
@@ -119,6 +137,81 @@ body {
   outline-offset: 2px;
 }
 
+.typography-responsive h1 {
+  font-size: clamp(2rem, 1.5rem + 1.5vw, 3.75rem);
+  line-height: 1.1;
+}
+
+.typography-responsive h2 {
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 3rem);
+  line-height: 1.2;
+}
+
+.typography-responsive h3,
+.typography-responsive h4 {
+  font-size: clamp(1.25rem, 1rem + 0.9vw, 2.25rem);
+  line-height: 1.3;
+}
+
+.typography-responsive p,
+.typography-responsive span {
+  font-size: clamp(0.95rem, 0.9rem + 0.5vw, 1.15rem);
+  line-height: 1.6;
+}
+
+.leaf-float {
+  position: absolute;
+  z-index: 5;
+  pointer-events: auto;
+  --leaf-scroll: 0px;
+  --leaf-hover-y: 0px;
+  --leaf-hover-x: 0px;
+  --leaf-hover-rotate: 0deg;
+  will-change: transform;
+  transform: translateY(calc(var(--leaf-scroll, 0px) + var(--leaf-hover-y, 0px)))
+    translateX(var(--leaf-hover-x, 0px)) rotate(var(--leaf-hover-rotate, 0deg));
+  transition: transform 0.5s ease-out;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .leaf-float:hover {
+    --leaf-hover-y: -10px;
+    --leaf-hover-x: -8px;
+    --leaf-hover-rotate: -4deg;
+    transition: transform 0.45s ease-out;
+  }
+}
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.scroll-animate.fade-up {
+  transform: translateY(20px);
+}
+
+.scroll-animate.fade-left {
+  transform: translateX(20px);
+}
+
+.scroll-animate.fade-right {
+  transform: translateX(-20px);
+}
+
+.scroll-animate.is-visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-animate {
+    transition: none;
+    animation: none;
+  }
+}
+
 @media (min-width: 1024px) {
   header > img {
     width: 10rem !important;
@@ -189,12 +282,6 @@ body {
   to {
     transform: translateX(0);
     opacity: 1;
-  }
-}
-
-@media (min-width: 1024px) {
-  .absolute.bottom-\[8%\].right-\[13\.5%\].hidden.sm\:flex {
-    animation: badge-slide-in 0.7s ease-out forwards;
   }
 }
 
