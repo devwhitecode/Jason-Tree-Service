@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import Header from "./Header";
 import MobileMenu from "./MobileMenu";
+import ScrollToTop from "./ScrollToTop";
 
 const sectionIds = {
   home: "home",
@@ -70,6 +71,7 @@ const Layout = () => {
         onNavigate={handleNavigate}
         onMenuToggle={() => setMenuOpen((prev) => !prev)}
       />
+      <ScrollToTop />
       <Outlet />
     </>
   );
