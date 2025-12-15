@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import Header from "./Header";
 import MobileMenu from "./MobileMenu";
+import ScrollProgress from "./ScrollProgress";
 import ScrollToTop from "./ScrollToTop";
 
 const sectionIds = {
@@ -136,6 +137,7 @@ const Layout = () => {
 
   return (
     <>
+      <ScrollProgress />
       <MobileMenu
         isOpen={menuOpen}
         onClose={() => setMenuOpen(false)}

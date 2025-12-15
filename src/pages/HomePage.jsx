@@ -65,7 +65,10 @@ const HomePage = () => {
         backgroundSize: "cover",
       }}
     >
-      <section id="home" className="w-full min-h-screen max-h-fit relative z-[99]">
+      <section
+        id="home"
+        className="w-full min-h-[90vh] sm:min-h-screen max-h-fit relative z-[99]"
+      >
         <div className="w-full relative">
           <div className="w-full h-fit relative">
             <img
@@ -76,7 +79,7 @@ const HomePage = () => {
             <img
               src={heroMobile}
               alt=""
-              className="w-full h-screen top-0 left-0 sm:hidden"
+              className="w-full sm:hidden top-0 left-0 h-full max-h-[95vh] object-cover"
             />
             <div
               className="absolute bottom-[8%] right-[13.5%] hidden sm:flex justify-start items-center gap-4 text-white pl-2 py-2 w-[20%] hero-badge"
@@ -134,7 +137,7 @@ const HomePage = () => {
           <img
             src={heroBgGreen}
             alt=""
-            className="w-full h-screen absolute top-0 left-0 sm:hidden"
+            className="w-full absolute top-0 left-0 sm:hidden h-full max-h-[92vh] object-cover"
           />
           <img
             src={heroBgLayerTwo}
@@ -162,7 +165,9 @@ const HomePage = () => {
         <div id="why-us" />
       </section>
 
-      <CoreServices />
+      <div className="sm:mt-0 mt-16 sm:-mt-2">
+        <CoreServices />
+      </div>
 
       <section id="gallery">
         <Banner />
