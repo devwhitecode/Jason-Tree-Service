@@ -106,9 +106,7 @@ const ContactForm = () => {
     <div 
       id="contact-form" 
       ref={formRef}
-      className={`w-full py-16 sm:py-24 px-4 sm:px-16 bg-transparent relative z-50 transition-all duration-500 ${
-        isHighlighted ? 'ring-4 ring-[#6DC642] ring-offset-8 rounded-3xl' : ''
-      }`}
+      className="w-full py-16 sm:py-24 px-4 sm:px-16 bg-transparent relative z-50"
     >
       <div className="max-w-6xl mx-auto">
         {isSubmitted ? (
@@ -184,7 +182,14 @@ const ContactForm = () => {
 
             {/* Right Side - Form */}
             <div className="w-full sm:w-[55%]">
-              <form onSubmit={handleSubmit} className="flex flex-col gap-5 bg-white/95 backdrop-blur-sm p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-200">
+              <form 
+                onSubmit={handleSubmit} 
+                className={`flex flex-col gap-5 bg-white/95 backdrop-blur-sm p-6 sm:p-8 rounded-2xl shadow-xl transition-all duration-500 ${
+                  isHighlighted 
+                    ? 'border-4 border-[#6DC642] shadow-[0_0_30px_rgba(109,198,66,0.6)]' 
+                    : 'border border-gray-200'
+                }`}
+              >
                 <div className="flex flex-col sm:flex-row gap-5">
                   <div className="flex-1">
                     <label htmlFor="name" className="AvantBold text-sm text-[#0F0F0F] block mb-2">

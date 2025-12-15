@@ -104,7 +104,7 @@ const ClientReviews = () => {
               </div>
 
               {/* Review Content */}
-              <div className="relative min-h-[180px] sm:min-h-[200px] mb-8">
+              <div className="relative min-h-[220px] sm:min-h-[200px] mb-8">
                 {reviews.map((review, index) => (
                   <div
                     key={index}
@@ -121,7 +121,7 @@ const ClientReviews = () => {
                       </svg>
                     </div>
                     
-                    <p className="Akria text-base sm:text-xl text-[#0F0F0F] text-center leading-relaxed px-1 sm:px-4 max-h-[180px] sm:max-h-[160px] overflow-hidden" style={{ lineHeight: '1.6', letterSpacing: '0.3px' }}>
+                    <p className="Akria text-base sm:text-xl text-[#0F0F0F] text-center leading-relaxed px-1 sm:px-4" style={{ lineHeight: '1.6', letterSpacing: '0.3px' }}>
                       {review.text}
                     </p>
                   </div>

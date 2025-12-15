@@ -39,7 +39,7 @@ const WhyChooseSection = ({ heading, highlighted, bodyDesktop, bodyMobile, image
       <img
         src={lastLeaf}
         alt=""
-        className={`w-28 sm:w-44 absolute top-[0%] sm:top-[-22%] right-0 z-[9999] cursor-pointer ${
+        className={`w-28 sm:w-44 absolute top-[0%] sm:top-[-22%] right-0 z-[9999] cursor-pointer touch-none ${
           isVisible
             ? "opacity-100 translate-x-0 rotate-0"
             : "opacity-0 translate-x-12 rotate-45"
@@ -53,11 +53,19 @@ const WhyChooseSection = ({ heading, highlighted, bodyDesktop, bodyMobile, image
         onMouseLeave={(e) => {
           e.currentTarget.style.transform = 'translate(0, 0) rotate(0deg) scale(1)';
         }}
+        onTouchStart={(e) => {
+          e.currentTarget.style.transform = 'translate(-15px, -15px) rotate(-12deg) scale(1.15)';
+        }}
+        onTouchEnd={(e) => {
+          setTimeout(() => {
+            e.currentTarget.style.transform = 'translate(0, 0) rotate(0deg) scale(1)';
+          }, 300);
+        }}
       />
       <img
         src={leafTwo}
         alt=""
-        className={`w-28 absolute top-[38%] left-0 z-[9999] cursor-pointer ${
+        className={`w-28 absolute top-[38%] left-0 z-[9999] cursor-pointer touch-none ${
           isVisible
             ? "opacity-100 translate-x-0 rotate-0"
             : "opacity-0 -translate-x-12 -rotate-45"
@@ -70,6 +78,14 @@ const WhyChooseSection = ({ heading, highlighted, bodyDesktop, bodyMobile, image
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.transform = 'translate(0, 0) rotate(0deg) scale(1)';
+        }}
+        onTouchStart={(e) => {
+          e.currentTarget.style.transform = 'translate(15px, -12px) rotate(12deg) scale(1.15)';
+        }}
+        onTouchEnd={(e) => {
+          setTimeout(() => {
+            e.currentTarget.style.transform = 'translate(0, 0) rotate(0deg) scale(1)';
+          }, 300);
         }}
       />
       <div className="w-full justify-between gap-8 flex relative max-sm:flex-col">
@@ -134,7 +150,7 @@ const WhyChooseSection = ({ heading, highlighted, bodyDesktop, bodyMobile, image
           <img
             src={whyLeaf1}
             alt=""
-            className={`w-28 absolute bottom-[15%] left-[-6%] cursor-pointer z-[9990] ${
+            className={`w-28 absolute bottom-[15%] left-[-6%] cursor-pointer z-[9990] touch-none ${
               isVisible
                 ? "opacity-100 translate-y-0 rotate-0"
                 : "opacity-0 translate-y-12 rotate-45"
@@ -149,11 +165,19 @@ const WhyChooseSection = ({ heading, highlighted, bodyDesktop, bodyMobile, image
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translate(0, 0) rotate(0deg) scale(1)';
             }}
+            onTouchStart={(e) => {
+              e.currentTarget.style.transform = 'translate(15px, -12px) rotate(12deg) scale(1.15)';
+            }}
+            onTouchEnd={(e) => {
+              setTimeout(() => {
+                e.currentTarget.style.transform = 'translate(0, 0) rotate(0deg) scale(1)';
+              }, 300);
+            }}
           />
           <img
             src={whyLeaf2}
             alt=""
-            className={`w-28 absolute bottom-[5%] left-[-6%] cursor-pointer z-[9990] ${
+            className={`w-28 absolute bottom-[5%] left-[-6%] cursor-pointer z-[9990] touch-none ${
               isVisible
                 ? "opacity-100 translate-y-0 rotate-0"
                 : "opacity-0 translate-y-12 -rotate-45"
@@ -167,6 +191,14 @@ const WhyChooseSection = ({ heading, highlighted, bodyDesktop, bodyMobile, image
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translate(0, 0) rotate(0deg) scale(1)';
+            }}
+            onTouchStart={(e) => {
+              e.currentTarget.style.transform = 'translate(15px, -12px) rotate(12deg) scale(1.15)';
+            }}
+            onTouchEnd={(e) => {
+              setTimeout(() => {
+                e.currentTarget.style.transform = 'translate(0, 0) rotate(0deg) scale(1)';
+              }, 300);
             }}
           />
           <div
