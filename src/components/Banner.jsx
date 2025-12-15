@@ -74,7 +74,7 @@ const Banner = () => {
         alt=""
       />
       <div
-        className={`relative bg-[#6DC642] w-[93%] pt-8 pb-0 sm:pt-16 sm:pb-0 flex flex-col sm:flex-row text-center pl-5 rounded-2xl transition-all duration-1000 ease-out ${
+        className={`relative bg-[#6DC642] w-[93%] pt-8 pb-0 sm:py-16 flex flex-col sm:flex-row text-center pl-5 rounded-2xl transition-all duration-1000 ease-out ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
         }`}
       >
