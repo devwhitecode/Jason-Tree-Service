@@ -5,6 +5,7 @@ import Banner from "../components/Banner";
 import FeaturedWork from "../components/FeaturedWork";
 import ClientReviews from "../components/ClientReviews";
 import Footer from "../components/Footer";
+import SlidingText from "../components/SlidingText";
 
 import mainBg from "../../Jasons Tree/assets/images/mainbg.png";
 import heroDesktop from "../../Jasons Tree/assets/images/newBgedited.png";
@@ -67,90 +68,63 @@ const HomePage = () => {
     >
       <section
         id="home"
-        className="w-full min-h-[90vh] sm:min-h-screen max-h-fit relative z-[99]"
+        className="w-full h-[70vh] sm:h-[90vh] relative z-[99]"
       >
-        <div className="w-full relative">
-          <div className="w-full h-fit relative">
+        <div className="w-full h-full relative overflow-hidden">
+          <div className="w-full h-full relative bg-gray-100">
             <img
               src={heroDesktop}
               alt=""
-              className="w-full h-auto top-0 left-0 hidden sm:block"
+              className="w-full h-full object-cover object-center hidden sm:block"
+              style={{ objectPosition: "center center" }}
             />
             <img
               src={heroMobile}
               alt=""
-              className="w-full sm:hidden top-0 left-0 h-full max-h-[95vh] object-cover"
+              className="w-full h-[110%] object-cover object-top sm:hidden absolute top-0 left-0"
+              style={{ objectPosition: "center top" }}
             />
+            
             <div
-              className="absolute bottom-[8%] right-[13.5%] hidden sm:flex justify-start items-center gap-4 text-white pl-2 py-2 w-[20%] hero-badge"
+              className="absolute bottom-[10%] right-[12%] hidden lg:flex justify-start items-center gap-3 text-white pl-4 pr-6 py-3 rounded-full hero-badge z-[100]"
               style={{
-                backgroundImage: `url(${heroBadge})`,
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "left",
-                backgroundSize: "100%",
+                background: "linear-gradient(135deg, #6DC642 0%, #5AB032 100%)",
+                boxShadow: "0 4px 15px rgba(109, 198, 66, 0.4)",
               }}
             >
-              <img src={heroEllipse} alt="" className="w-12 h-12 object-cover" />
+              <img src={heroEllipse} alt="" className="w-14 h-14 object-cover rounded-full" />
               <div className="flex flex-col justify-center items-start">
-                <h2 className="AvantBold text-sm -mb-1">24/7</h2>
-                <p className="AvantLight text-sm" style={{ lineHeight: 1 }}>
+                <h2 className="AvantBold text-base">24/7</h2>
+                <p className="AvantLight text-sm" style={{ lineHeight: 1.2 }}>
                   Emergency <br />
                   Response
                 </p>
               </div>
             </div>
 
-            <div className="absolute top-0 left-0 w-full h-screen pt-40 sm:pt-80 px-4">
+            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center px-4 sm:px-8 z-[50]">
               <h1
-                className="relative text-center text-6xl Akria text-[#0F0F0F] hidden sm:block"
-                style={{ lineHeight: "4.5rem" }}
+                className="relative text-center text-4xl sm:text-5xl lg:text-6xl Akria text-[#0F0F0F]"
+                style={{ lineHeight: "1.2" }}
               >
-                Professional <br />
-                <span className="text-[#358D0A]">
-                  Commercial <br />
-                  & Residential Tree <br />
-                  Services <br />
-                </span>
-                in Los Angeles & <br />
-                Orange County
-              </h1>
-              <h1
-                className="relative text-center text-3xl Akria text-[#0F0F0F] sm:hidden"
-                style={{ lineHeight: "2.5rem" }}
-              >
-                Professional{" "}
-                <span className="text-[#358D0A]">
+                <span className="block sm:inline">Professional</span>
+                <br className="hidden sm:block" />
+                <span className="text-[#358D0A] block sm:inline">
                   Commercial <br />
                   & Residential Tree <br />
                   Services{" "}
                 </span>
-                in Los Angeles & <br />
-                Orange County
+                <br className="hidden sm:block" />
+                <span className="block sm:inline">in Los Angeles &</span>
+                <br className="hidden sm:block" />
+                <span className="block sm:inline">Orange County</span>
               </h1>
             </div>
           </div>
-          <img
-            src={heroBgLayer}
-            alt=""
-            className="w-full h-auto absolute top-0 left-0 hidden sm:block"
-          />
-          <img
-            src={heroBgGreen}
-            alt=""
-            className="w-full absolute top-0 left-0 sm:hidden h-full max-h-[92vh] object-cover"
-          />
-          <img
-            src={heroBgLayerTwo}
-            alt=""
-            className="w-full h-auto absolute top-6 left-0 hidden sm:block"
-          />
-          <img
-            src={heroTextMobile}
-            alt=""
-            className="w-full h-auto absolute bottom-4 left-0 sm:hidden object-contain"
-          />
         </div>
       </section>
+
+      <SlidingText text="25% OFF  --  Palm Tree Services (10+ Palms)" />
 
       <section id="about">
         <WhyChooseSection

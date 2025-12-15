@@ -221,21 +221,7 @@ body {
 
 @media (max-width: 640px) {
   #home {
-    min-height: 60vh !important;
-  }
-  #home .w-full.relative,
-  #home .w-full.h-fit.relative {
-    min-height: 60vh;
-  }
-}
-
-@media (max-width: 640px) {
-  img[src*="mobilegreenSvg.png"] {
-    height: 60vh !important;
-    max-height: 60vh !important;
-  }
-  img[src*="textSvgmobile.png"] {
-    height: 91vh !important;
+    height: 70vh !important;
   }
 }
 
@@ -249,13 +235,6 @@ body {
   #home h1 {
     font-size: 2.25rem; /* tailwind text-4xl equivalent */
     line-height: 2.75rem;
-  }
-}
-
-@media (max-width: 640px) {
-  img[src*="mobilegreenSvg.png"] {
-    height: 60vh !important;
-    max-height: 60vh !important;
   }
 }
 .swiper-button-prev img,
@@ -296,6 +275,48 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+/* Ensure hero sections have proper clipping */
+#home,
+#home > div,
+#home > div > div {
+  overflow: hidden !important;
+  clip-path: inset(0);
+}
+
+/* Ensure leaf images are visible */
+.leaf-float {
+  z-index: 9999 !important;
+}
+
+/* Ensure header is always on top */
+header {
+  z-index: 10000 !important;
+}
+
+/* Sliding Text Animation */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide {
+  animation: slide 30s linear infinite;
+}
+
+.sliding-text-wrapper {
+  display: flex;
+  width: max-content;
+}
+
+.sliding-text-content {
+  display: flex;
+  flex-shrink: 0;
 }
 
 

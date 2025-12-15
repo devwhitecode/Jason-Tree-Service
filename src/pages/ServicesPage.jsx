@@ -3,6 +3,7 @@ import Banner from "../components/Banner";
 import FeaturedWork from "../components/FeaturedWork";
 import ClientReviews from "../components/ClientReviews";
 import Footer from "../components/Footer";
+import SlidingText from "../components/SlidingText";
 
 import mainBg from "../../Jasons Tree/assets/images/mainbg.png";
 import serviceHero from "../../Jasons Tree/assets/images/servicepageHero.png";
@@ -107,50 +108,48 @@ const ServicesPage = () => (
       backgroundSize: "cover",
     }}
   >
-    <div className="w-full min-h-screen max-h-fit relative z-[99]">
-      <div className="w-full h-fit relative">
-        <div className="w-full h-fit relative">
-          <img
-            src={serviceHero}
-            alt=""
-            className="w-full h-auto top-0 left-0 hidden sm:block"
-          />
-          <img
-            src={serviceHero}
-            alt=""
-            className="w-full h-screen top-0 left-0 object-cover sm:hidden"
-          />
-          <div className="absolute top-0 left-0 w-full h-screen pt-28 sm:pt-60 flex flex-col gap-5 sm:gap-12">
-            <h1 className="relative text-center text-2xl sm:text-4xl Akria text-[#0F0F0F] max-sm:text-shadow-lg">
+    <div className="w-full h-[70vh] sm:h-[90vh] relative z-[99]">
+      <div className="w-full h-full relative overflow-hidden">
+        <div className="w-full h-full relative bg-gray-100">
+          <div className="w-full h-full hidden sm:block">
+            <img
+              src={serviceHero}
+              alt=""
+              className="w-full h-full object-cover object-center"
+              style={{ objectPosition: "center center" }}
+            />
+          </div>
+          <div className="w-full h-full sm:hidden absolute top-0 left-0">
+            <img
+              src={serviceHero}
+              alt=""
+              className="w-full h-[110%] object-cover object-top"
+              style={{ objectPosition: "center top" }}
+            />
+          </div>
+          <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center gap-5 sm:gap-8 px-4 sm:px-8 z-[50]">
+            <h1 className="relative text-center text-2xl sm:text-3xl lg:text-4xl Akria text-[#0F0F0F]">
               PROFESSIONAL RESIDENTIAL &<br />
-              COMMERCIAL<span className="text-[#6DC642]">TREE CARE</span>
+              COMMERCIAL <span className="text-[#6DC642]">TREE CARE</span>
             </h1>
-            <p className="AvantLight text-base sm:text-lg max-sm:font-semibold sm:text-sm text-center">
-              Keeping your trees healthy, safe, and beautifully shaped requires expert attention. At <br />
-              Jayson’s Tree Service, we provide a full range of maintenance solutions designed to <br />
-              enhance property value, improve tree health, and maintain a clean, professional <br />
+            <p className="AvantLight text-sm sm:text-base lg:text-lg text-center max-w-4xl leading-relaxed">
+              Keeping your trees healthy, safe, and beautifully shaped requires expert attention. At <br className="hidden sm:block" />
+              Jayson's Tree Service, we provide a full range of maintenance solutions designed to <br className="hidden sm:block" />
+              enhance property value, improve tree health, and maintain a clean, professional <br className="hidden sm:block" />
               appearance for homes, retail centers, and commercial properties.
             </p>
             <button
               type="button"
-              className="mx-auto px-4 py-3 text-lg font-bold AvantBold bg-[#6DC642] rounded-2xl text-white rounded-tr-none transition ease-in duration-150 hover:bg-white hover:text-[#6DC642] z-[999]"
+              className="px-6 py-3 text-base sm:text-lg font-bold AvantBold bg-[#6DC642] rounded-2xl text-white rounded-tr-none transition ease-in duration-150 hover:bg-white hover:text-[#6DC642] z-[999]"
             >
               Book an Appointment
             </button>
           </div>
         </div>
-        <img
-          src={serviceHeroGreen}
-          alt=""
-          className="w-full h-auto absolute top-0 left-0 hidden sm:block"
-        />
-        <img
-          src={serviceHeroText}
-          alt=""
-          className="w-full h-auto absolute top-24 left-0 hidden sm:block"
-        />
       </div>
     </div>
+
+    <SlidingText text="25% OFF  --  Palm Tree Services (10+ Palms)" />
 
     <div className="w-full h-fit sm:min-h-screen pt-16 sm:pt-40 relative max-sm:pb-10">
       <img
@@ -195,7 +194,7 @@ const ServicesPage = () => (
             alt=""
             className="w-28 absolute bottom-[5%] left-[-6%]"
           />
-          <div className="absolute w-full h-[90%] transform -translate-y-1/2 top-1/2 right-0 rounded-tl-full rounded-bl-full bg-[#356020] z-[-1]" />
+          <div className="absolute w-full h-[90%] transform -translate-y-1/2 top-1/2 right-0 bg-[#356020] z-[-1]" />
           <div className="w-[45%] sm:w-[60%] h-[50%] sm:h-[60dvh] relative ml-32 sm:ml-28 z-[10]">
             <img
               src={serviceWhyImage}
