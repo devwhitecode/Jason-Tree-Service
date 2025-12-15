@@ -3,22 +3,34 @@ import Angi from "../../Jasons Tree/assets/svg/Angi.svg";
 
 const reviews = [
   {
-    text: "Fast, professional and great pricing. They cleaned everything perfectly.",
-    author: "Maria R.",
+    text: "Fast, professional and great pricing. They cleaned everything perfectly. Highly recommend Jayson's Tree Service!",
+    author: "Maria Rodriguez",
     rating: 5,
     location: "Los Angeles, CA"
   },
   {
-    text: "Excellent service! The crew was professional and the cleanup was thorough. Highly recommend!",
-    author: "John D.",
+    text: "Excellent service! The crew was professional, efficient, and the cleanup was thorough. They transformed my backyard!",
+    author: "John Davidson",
     rating: 5,
     location: "Orange County, CA"
   },
   {
-    text: "Quick response for emergency tree removal. Great job and fair price. Will use again!",
-    author: "Sarah M.",
+    text: "Quick response for emergency tree removal after the storm. Great job, fair price, and very professional. Will use again!",
+    author: "Sarah Mitchell",
     rating: 5,
     location: "Irvine, CA"
+  },
+  {
+    text: "Best tree service in LA! They removed three large trees safely and cleaned up perfectly. The team was courteous and skilled.",
+    author: "Robert Chen",
+    rating: 5,
+    location: "Pasadena, CA"
+  },
+  {
+    text: "Outstanding work on our commercial property. They handle all our tree maintenance needs professionally and on schedule. Highly satisfied!",
+    author: "Jennifer Martinez",
+    rating: 5,
+    location: "Santa Ana, CA"
   },
 ];
 
@@ -92,7 +104,7 @@ const ClientReviews = () => {
               </div>
 
               {/* Review Content */}
-              <div className="relative min-h-[220px] sm:min-h-[240px]">
+              <div className="relative min-h-[180px] sm:min-h-[200px] mb-8">
                 {reviews.map((review, index) => (
                   <div
                     key={index}
@@ -102,28 +114,46 @@ const ClientReviews = () => {
                         : "opacity-0 scale-95 pointer-events-none"
                     }`}
                   >
-                    <div className="flex flex-col justify-center h-full">
-                      <p className="AvantLight text-lg sm:text-xl text-[#0F0F0F] text-center mb-6 leading-relaxed italic px-4">
-                        "{review.text}"
-                      </p>
-                      <div className="border-t-2 border-[#6DC642]/20 pt-6 mt-6">
-                        <p className="AvantBold text-lg text-[#0F0F0F] text-center">
-                          {review.author}
-                        </p>
-                        <p className="AvantLight text-sm text-[#6DC642] text-center mt-2 flex items-center justify-center gap-1">
-                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                          </svg>
-                          {review.location}
-                        </p>
-                      </div>
+                    {/* Quote Icon */}
+                    <div className="flex justify-center mb-3 sm:mb-4">
+                      <svg className="w-10 h-10 sm:w-14 sm:h-14 text-[#6DC642] opacity-20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                      </svg>
                     </div>
+                    
+                    <p className="Akria text-base sm:text-xl text-[#0F0F0F] text-center leading-relaxed px-1 sm:px-4 max-h-[180px] sm:max-h-[160px] overflow-hidden" style={{ lineHeight: '1.6', letterSpacing: '0.3px' }}>
+                      {review.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Author Info - Fixed height section */}
+              <div className="relative h-16 sm:h-20 mb-6">
+                {reviews.map((review, index) => (
+                  <div
+                    key={index}
+                    className={`absolute inset-0 transition-all duration-700 flex flex-col items-center justify-center ${
+                      index === activeIndex
+                        ? "opacity-100"
+                        : "opacity-0"
+                    }`}
+                  >
+                    <p className="AvantBold text-base sm:text-xl text-[#356020] text-center">
+                      {review.author}
+                    </p>
+                    <p className="AvantLight text-xs sm:text-base text-[#6DC642] text-center mt-2 flex items-center justify-center gap-1 sm:gap-2">
+                      <svg className="w-3 h-3 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                      </svg>
+                      {review.location}
+                    </p>
                   </div>
                 ))}
               </div>
 
               {/* Pagination Dots */}
-              <div className="flex justify-center gap-3 mt-10">
+              <div className="flex justify-center gap-3 mt-8">
                 {reviews.map((_, index) => (
                   <button
                     key={index}
@@ -143,17 +173,17 @@ const ClientReviews = () => {
               </div>
 
               {/* Progress Bar */}
-              <div className="mt-6">
-                <div className="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
+              <div className="mt-6 px-2">
+                <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden shadow-inner">
                   <div 
-                    className="h-full bg-gradient-to-r from-[#6DC642] to-[#5AB032] rounded-full transition-all duration-500 ease-out shadow-lg"
+                    className="h-full bg-gradient-to-r from-[#6DC642] to-[#5AB032] rounded-full transition-all duration-500 ease-out"
                     style={{ 
                       width: `${((activeIndex + 1) / reviews.length) * 100}%`,
-                      boxShadow: '0 0 10px rgba(109, 198, 66, 0.5)'
+                      boxShadow: '0 0 12px rgba(109, 198, 66, 0.6)'
                     }}
                   />
                 </div>
-                <p className="AvantLight text-xs text-center text-gray-400 mt-2">
+                <p className="AvantLight text-xs text-center text-gray-500 mt-3">
                   Review {activeIndex + 1} of {reviews.length}
                 </p>
               </div>
