@@ -14,7 +14,7 @@ const navRight = [
   { label: "Contact Us", key: "contact" },
 ];
 
-const Header = ({ onNavigate, onMenuToggle }) => {
+const Header = ({ onNavigate, onMenuToggle, isMenuOpen }) => {
   const renderLink = ({ label, key, highlightIcon }) => (
     <a
       href={`#${key}`}
@@ -50,10 +50,16 @@ const Header = ({ onNavigate, onMenuToggle }) => {
       <button
         type="button"
         onClick={onMenuToggle}
-        className="flex justify-start items-center gap-2 sm:hidden text-[#0F0F0F] text-lg"
-        aria-label="Open navigation menu"
+        className="flex justify-start items-center gap-2 sm:hidden text-[#0F0F0F] text-lg hover:text-[#6DC642] transition-colors duration-300"
+        aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
       >
-        <img src={mobileMenuButton} alt="" className="w-5" />
+        <img
+          src={mobileMenuButton}
+          alt=""
+          className={`w-5 transition-transform duration-500 ease-in-out ${
+            isMenuOpen ? "rotate-90 scale-110" : "rotate-0 scale-100"
+          }`}
+        />
         Menu
       </button>
     </header>

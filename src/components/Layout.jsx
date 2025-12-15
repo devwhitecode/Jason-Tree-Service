@@ -146,6 +146,7 @@ const Layout = () => {
       <Header
         onNavigate={handleNavigate}
         onMenuToggle={() => setMenuOpen((prev) => !prev)}
+        isMenuOpen={menuOpen}
       />
       <ScrollToTop />
       <Outlet />
