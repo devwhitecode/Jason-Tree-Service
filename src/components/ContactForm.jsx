@@ -136,11 +136,25 @@ const ContactForm = () => {
     <div 
       id="contact-form" 
       ref={formRef}
-      className="w-full py-16 sm:py-24 px-4 sm:px-16 bg-transparent relative z-50"
+      className="w-full py-0 px-4 sm:px-16 bg-transparent relative z-50"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
+        {/* Header Section */}
+        <div className="flex flex-col items-center text-center gap-4 mb-10 sm:mb-14">
+          <div className="flex items-center gap-3">
+            <img src={leafIcon} alt="" className="w-8" />
+            <h2 className="Akria text-3xl sm:text-4xl text-[#0F0F0F]">
+              Book an <span className="text-[#6DC642]">Appointment</span>
+            </h2>
+          </div>
+          
+          <p className="AvantLight text-base sm:text-lg leading-7 text-[#2C2C2C] font-medium max-w-3xl">
+            Ready to transform your landscape? Fill out the form and our expert team will contact you within 24 hours to schedule your free estimate for Los Angeles County tree service.
+          </p>
+        </div>
+
         {isSubmitted ? (
-          <div className="bg-white p-12 rounded-2xl shadow-xl flex flex-col items-center justify-center gap-6 min-h-[400px] border-2 border-[#6DC642]">
+          <div className="p-12 rounded-2xl shadow-xl flex flex-col items-center justify-center gap-6 min-h-[400px] border-2 border-[#6DC642]" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}>
             <div className="w-20 h-20 rounded-full bg-[#6DC642] flex items-center justify-center">
               <svg
                 width="40"
@@ -163,62 +177,35 @@ const ContactForm = () => {
             </p>
           </div>
         ) : (
-          <div className="flex flex-col sm:flex-row gap-10 sm:gap-16">
-            {/* Left Side - Info */}
-            <div className="w-full sm:w-[45%] flex flex-col gap-6">
-              <div className="flex items-center gap-3">
-                <img src={leafIcon} alt="" className="w-8" />
-                <h2 className="Akria text-3xl sm:text-4xl text-[#0F0F0F]">
-                  Book an <span className="text-[#6DC642]">Appointment</span>
-                </h2>
-              </div>
-              
-              <p className="AvantLight text-base sm:text-lg leading-7 text-[#2C2C2C] font-medium">
-                Ready to transform your landscape? Fill out the form and our expert team will contact you within 24 hours to schedule your free estimate for Los Angeles County tree service.
-              </p>
-
-              <div className="flex flex-col gap-4 mt-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#6DC642] flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white AvantBold text-sm">1</span>
-                  </div>
-                  <div>
-                    <h3 className="AvantBold text-lg text-[#0F0F0F]">Free Estimate</h3>
-                    <p className="AvantLight text-sm text-[#2C2C2C]">No obligation, detailed quote for your project</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#6DC642] flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white AvantBold text-sm">2</span>
-                  </div>
-                  <div>
-                    <h3 className="AvantBold text-lg text-[#0F0F0F]">Fast Response</h3>
-                    <p className="AvantLight text-sm text-[#2C2C2C]">24-hour callback, same-day estimates available</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#6DC642] flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white AvantBold text-sm">3</span>
-                  </div>
-                  <div>
-                    <h3 className="AvantBold text-lg text-[#0F0F0F]">Professional Service</h3>
-                    <p className="AvantLight text-sm text-[#2C2C2C]">Licensed, insured, and fully equipped crew</p>
-                  </div>
-                </div>
+          <div className="flex flex-col lg:flex-row lg:items-stretch gap-6 sm:gap-8 lg:gap-10">
+            {/* Left Side - Google Map */}
+            <div className="w-full lg:w-[45%] order-1 lg:order-1 flex">
+              <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl border border-gray-200/50 w-full h-[280px] sm:h-[350px] md:h-[400px] lg:h-full">
+                <iframe
+                  title="Jason's Tree Service Location - Los Angeles, CA"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.2746123736!2d-118.74137277477829!3d34.02073049552527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1734220800000!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, display: 'block' }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  aria-label="Google map showing Jason's Tree Service location in Los Angeles, CA"
+                  className="w-full h-full"
+                ></iframe>
               </div>
             </div>
 
             {/* Right Side - Form */}
-            <div className="w-full sm:w-[55%]">
+            <div className="w-full lg:w-[55%] order-2 lg:order-2">
               <form 
                 onSubmit={handleSubmit} 
-                className={`flex flex-col gap-5 bg-white/95 backdrop-blur-sm p-6 sm:p-8 rounded-2xl shadow-xl transition-all duration-500 ${
-                  isHighlighted 
-                    ? 'border-4 border-[#6DC642] shadow-[0_0_30px_rgba(109,198,66,0.6)]' 
-                    : 'border border-gray-200'
-                }`}
+            className={`flex flex-col gap-5 p-6 sm:p-8 rounded-2xl shadow-xl transition-all duration-500 ${
+              isHighlighted 
+                ? 'border-4 border-[#6DC642] shadow-[0_0_30px_rgba(109,198,66,0.6)]' 
+                : 'border border-gray-200/50'
+            }`}
+            style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(10px)' }}
               >
                 <div className="flex flex-col sm:flex-row gap-5">
                   <div className="flex-1">
@@ -235,6 +222,7 @@ const ContactForm = () => {
                       className={`w-full px-4 py-3 border-2 rounded-lg focus:border-[#6DC642] focus:outline-none transition-colors duration-300 AvantLight ${
                         errors.name ? "border-red-500" : "border-gray-200"
                       }`}
+                      style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }}
                       placeholder="John Doe"
                     />
                     {errors.name && (
@@ -255,6 +243,7 @@ const ContactForm = () => {
                       className={`w-full px-4 py-3 border-2 rounded-lg focus:border-[#6DC642] focus:outline-none transition-colors duration-300 AvantLight ${
                         errors.phone ? "border-red-500" : "border-gray-200"
                       }`}
+                      style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }}
                       placeholder="(805) 535-3739"
                     />
                     {errors.phone && (
@@ -274,9 +263,10 @@ const ContactForm = () => {
                       value={formData.propertyType}
                       onChange={handleChange}
                       required
-                      className={`w-full px-4 py-3 border-2 rounded-lg focus:border-[#6DC642] focus:outline-none transition-colors duration-300 AvantLight bg-white ${
+                      className={`w-full px-4 py-3 border-2 rounded-lg focus:border-[#6DC642] focus:outline-none transition-colors duration-300 AvantLight ${
                         errors.propertyType ? "border-red-500" : "border-gray-200"
                       }`}
+                      style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }}
                     >
                       <option value="">Select property type</option>
                       <option value="residential">Residential</option>
@@ -296,9 +286,10 @@ const ContactForm = () => {
                       value={formData.city}
                       onChange={handleChange}
                       required
-                      className={`w-full px-4 py-3 border-2 rounded-lg focus:border-[#6DC642] focus:outline-none transition-colors duration-300 AvantLight bg-white ${
+                      className={`w-full px-4 py-3 border-2 rounded-lg focus:border-[#6DC642] focus:outline-none transition-colors duration-300 AvantLight ${
                         errors.city ? "border-red-500" : "border-gray-200"
                       }`}
+                      style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }}
                     >
                       <option value="">Select area</option>
                       <option value="la-county">Los Angeles County</option>
@@ -322,10 +313,11 @@ const ContactForm = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className={`w-full px-4 py-3 border-2 rounded-lg focus:border-[#6DC642] focus:outline-none transition-colors duration-300 AvantLight ${
-                      errors.email ? "border-red-500" : "border-gray-200"
-                    }`}
-                    placeholder="john@example.com"
+                      className={`w-full px-4 py-3 border-2 rounded-lg focus:border-[#6DC642] focus:outline-none transition-colors duration-300 AvantLight ${
+                        errors.email ? "border-red-500" : "border-gray-200"
+                      }`}
+                      style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }}
+                      placeholder="john@example.com"
                   />
                   {errors.email && (
                     <p className="text-red-500 text-xs mt-1 AvantLight">{errors.email}</p>
@@ -387,6 +379,7 @@ const ContactForm = () => {
                       className={`w-full px-4 py-3 border-2 rounded-lg focus:border-[#6DC642] focus:outline-none transition-colors duration-300 AvantLight ${
                         errors.preferredDate ? "border-red-500" : "border-gray-200"
                       }`}
+                      style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }}
                     />
                     {errors.preferredDate && (
                       <p className="text-red-500 text-xs mt-1 AvantLight">{errors.preferredDate}</p>
@@ -406,6 +399,7 @@ const ContactForm = () => {
                       className={`w-full px-4 py-3 border-2 rounded-lg focus:border-[#6DC642] focus:outline-none transition-colors duration-300 AvantLight ${
                         errors.preferredTime ? "border-red-500" : "border-gray-200"
                       }`}
+                      style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }}
                     />
                     {errors.preferredTime && (
                       <p className="text-red-500 text-xs mt-1 AvantLight">{errors.preferredTime}</p>
@@ -423,7 +417,8 @@ const ContactForm = () => {
                     name="photo"
                     accept="image/*"
                     onChange={handleFileChange}
-                    className="w-full px-4 py-3 border-2 border-dashed rounded-lg border-gray-200 focus:border-[#6DC642] focus:outline-none transition-colors duration-300 AvantLight bg-white file:mr-4 file:px-4 file:py-2 file:rounded-lg file:border-0 file:bg-[#6DC642] file:text-white file:font-bold file:cursor-pointer"
+                    className="w-full px-4 py-3 border-2 border-dashed rounded-lg border-gray-200 focus:border-[#6DC642] focus:outline-none transition-colors duration-300 AvantLight file:mr-4 file:px-4 file:py-2 file:rounded-lg file:border-0 file:bg-[#6DC642] file:text-white file:font-bold file:cursor-pointer"
+                    style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }}
                     aria-label="Upload a photo of the tree or property"
                   />
                   {formData.photo && (
@@ -442,6 +437,7 @@ const ContactForm = () => {
                     onChange={handleChange}
                     rows="4"
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#6DC642] focus:outline-none transition-colors duration-300 AvantLight resize-none"
+                    style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }}
                     placeholder="Tell us about your tree service needs..."
                   />
                 </div>

@@ -39,7 +39,7 @@ const WhyChooseSection = ({ heading, highlighted, bodyDesktop, bodyMobile, image
       <img
         src={lastLeaf}
         alt=""
-        className={`w-28 sm:w-44 absolute top-[0%] sm:top-[-22%] right-0 z-[9999] cursor-pointer touch-none ${
+        className={`hidden sm:block w-28 sm:w-44 absolute top-[0%] sm:top-[-22%] right-0 z-[9999] cursor-pointer touch-none ${
           isVisible
             ? "opacity-100 translate-x-0 rotate-0"
             : "opacity-0 translate-x-12 rotate-45"
@@ -150,7 +150,7 @@ const WhyChooseSection = ({ heading, highlighted, bodyDesktop, bodyMobile, image
           <img
             src={whyLeaf1}
             alt=""
-            className={`w-28 absolute bottom-[15%] left-[-6%] cursor-pointer z-[9990] touch-none ${
+            className={`w-28 absolute top-[20%] right-[-6%] cursor-pointer z-[9990] touch-none ${
               isVisible
                 ? "opacity-100 translate-y-0 rotate-0"
                 : "opacity-0 translate-y-12 rotate-45"
@@ -160,13 +160,13 @@ const WhyChooseSection = ({ heading, highlighted, bodyDesktop, bodyMobile, image
               transitionDelay: isVisible ? '300ms' : '0ms',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translate(15px, -12px) rotate(12deg) scale(1.15)';
+              e.currentTarget.style.transform = 'translate(-15px, -12px) rotate(-12deg) scale(1.15)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translate(0, 0) rotate(0deg) scale(1)';
             }}
             onTouchStart={(e) => {
-              e.currentTarget.style.transform = 'translate(15px, -12px) rotate(12deg) scale(1.15)';
+              e.currentTarget.style.transform = 'translate(-15px, -12px) rotate(-12deg) scale(1.15)';
             }}
             onTouchEnd={(e) => {
               setTimeout(() => {
@@ -177,7 +177,7 @@ const WhyChooseSection = ({ heading, highlighted, bodyDesktop, bodyMobile, image
           <img
             src={whyLeaf2}
             alt=""
-            className={`w-28 absolute bottom-[5%] left-[-6%] cursor-pointer z-[9990] touch-none ${
+            className={`w-28 absolute bottom-[20%] right-[-6%] cursor-pointer z-[9990] touch-none ${
               isVisible
                 ? "opacity-100 translate-y-0 rotate-0"
                 : "opacity-0 translate-y-12 -rotate-45"
@@ -187,13 +187,13 @@ const WhyChooseSection = ({ heading, highlighted, bodyDesktop, bodyMobile, image
               transitionDelay: isVisible ? '400ms' : '0ms',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translate(15px, -12px) rotate(12deg) scale(1.15)';
+              e.currentTarget.style.transform = 'translate(-15px, 12px) rotate(12deg) scale(1.15)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translate(0, 0) rotate(0deg) scale(1)';
             }}
             onTouchStart={(e) => {
-              e.currentTarget.style.transform = 'translate(15px, -12px) rotate(12deg) scale(1.15)';
+              e.currentTarget.style.transform = 'translate(-15px, 12px) rotate(12deg) scale(1.15)';
             }}
             onTouchEnd={(e) => {
               setTimeout(() => {

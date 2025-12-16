@@ -16,7 +16,6 @@ const routeMap = {
 
 const Layout = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [pendingScrollTarget, setPendingScrollTarget] = useState(null);
   const [activeSection, setActiveSection] = useState("home");
   const navigate = useNavigate();
   const location = useLocation();
@@ -24,28 +23,6 @@ const Layout = () => {
   const handleNavigate = (target) => {
     setMenuOpen(false);
     setActiveSection(target);
-
-    if (target === "contact") {
-      if (location.pathname === "/") {
-        const formElement = document.getElementById("contact-form");
-        if (formElement) {
-          formElement.scrollIntoView({ behavior: "smooth", block: "center" });
-          window.dispatchEvent(new Event("highlightContactForm"));
-          return;
-        }
-      }
-      if (location.pathname === "/contact") {
-        const formElement = document.getElementById("contact-form");
-        if (formElement) {
-          formElement.scrollIntoView({ behavior: "smooth", block: "center" });
-          window.dispatchEvent(new Event("highlightContactForm"));
-        }
-        return;
-      }
-      setPendingScrollTarget("contact-form");
-      navigate(routeMap[target]);
-      return;
-    }
 
     const nextRoute = routeMap[target] || "/";
     if (location.pathname !== nextRoute) {
@@ -57,20 +34,6 @@ const Layout = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  useEffect(() => {
-    if (pendingScrollTarget && location.pathname === "/contact") {
-      const timer = setTimeout(() => {
-        const element = document.getElementById(pendingScrollTarget);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "center" });
-          window.dispatchEvent(new Event("highlightContactForm"));
-        }
-        setPendingScrollTarget(null);
-      }, 300);
-
-      return () => clearTimeout(timer);
-    }
-  }, [location.pathname, pendingScrollTarget]);
 
   useEffect(() => {
     setMenuOpen(false);

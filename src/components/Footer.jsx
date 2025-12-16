@@ -1,5 +1,4 @@
 import footerLeaf1 from "../../Jasons Tree/assets/images/footerleaf-1.png";
-import footerLeaf2 from "../../Jasons Tree/assets/images/footerleaf-2.png";
 import footerLogo from "../../Jasons Tree/assets/images/footerlogo.png";
 import phoneIcon from "../../Jasons Tree/assets/svg/phone.svg";
 import clockIcon from "../../Jasons Tree/assets/svg/clock.svg";
@@ -20,20 +19,6 @@ const Footer = ({ onNavigate }) => (
       }}
       src={footerLeaf1}
       alt=""
-    />
-    <img 
-      className="absolute w-[10%] bottom-0 right-0 z-[9990] cursor-pointer" 
-      style={{
-        transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.transform = 'translate(-15px, -15px) rotate(-12deg) scale(1.15)';
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.transform = 'translate(0, 0) rotate(0deg) scale(1)';
-      }}
-      src={footerLeaf2} 
-      alt="" 
     />
     <div className="bg-[#356020] w-full max-sm:px-4 sm:w-[90%] h-full rounded-t-[20px] sm:rounded-t-[100px] pb-6">
       <div className="footertop h-fit w-full flex flex-col sm:flex-row items-center sm:items-end justify-between pt-[25px] sm:pt-[25px]">
@@ -79,10 +64,38 @@ const Footer = ({ onNavigate }) => (
           </div>
           <div className="flex flex-col gap-2">
             <h1 className="uppercase AvantBold">SERVICE AREAS</h1>
-            <h2>Los Angeles County</h2>
-            <h2>Orange County</h2>
-            <h2>Irvine</h2>
-            <h2>Surrounding Cities</h2>
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=Los+Angeles+County,+CA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#6DC642] transition-all duration-300 hover:translate-x-2 cursor-pointer"
+            >
+              Los Angeles County
+            </a>
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=Orange+County,+CA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#6DC642] transition-all duration-300 hover:translate-x-2 cursor-pointer"
+            >
+              Orange County
+            </a>
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=Irvine,+CA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#6DC642] transition-all duration-300 hover:translate-x-2 cursor-pointer"
+            >
+              Irvine
+            </a>
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=Los+Angeles+Metropolitan+Area,+CA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#6DC642] transition-all duration-300 hover:translate-x-2 cursor-pointer"
+            >
+              Surrounding Cities
+            </a>
           </div>
           <div className="flex flex-col gap-2">
             <a 

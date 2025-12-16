@@ -687,5 +687,34 @@ img[src*="mwp"] {
   animation: subtleFloat 8s ease-in-out infinite;
 }
 
+/* High Quality Image Rendering - Prevent Pixelation */
+img {
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* Ensure images maintain quality on high DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: auto;
+    -ms-interpolation-mode: bicubic;
+  }
+}
+
+/* Prevent image pixelation on scale and hover */
+img[class*="object-cover"],
+img[class*="object-contain"],
+img[class*="group"] {
+  image-rendering: auto;
+  -ms-interpolation-mode: bicubic;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 
 

@@ -74,7 +74,7 @@ const Banner = () => {
         alt=""
       />
       <div
-        className={`relative bg-[#6DC642] w-[93%] pt-8 pb-0 sm:py-16 flex flex-col sm:flex-row text-center pl-5 rounded-2xl transition-all duration-1000 ease-out ${
+        className={`relative bg-[#356020] w-[93%] pt-8 pb-0 sm:py-16 flex flex-col sm:flex-row text-center pl-5 rounded-2xl transition-all duration-1000 ease-out ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
         }`}
       >
@@ -92,7 +92,7 @@ const Banner = () => {
           </p>
           <a
             href="tel:+18055353739"
-            className="py-2 w-fit bg-[#356020] AvantBold text-white px-6 rounded-b-2xl rounded-tl-2xl hover:bg-white hover:text-[#356020] hover:scale-110 hover:-translate-y-1 hover:shadow-xl transition-all ease-out duration-300 cursor-pointer relative overflow-hidden group inline-block"
+            className="py-2 w-fit bg-[#6DC642] AvantBold text-white px-6 rounded-b-2xl rounded-tl-2xl hover:bg-white hover:text-[#356020] hover:scale-110 hover:-translate-y-1 hover:shadow-xl transition-all ease-out duration-300 cursor-pointer relative overflow-hidden group inline-block"
           >
             <span className="relative z-10">Call (805) 535-3739</span>
             <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
