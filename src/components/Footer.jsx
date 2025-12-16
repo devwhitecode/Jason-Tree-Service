@@ -1,4 +1,4 @@
-import footerLeaf1 from "../../Jasons Tree/assets/images/footerleaf-1.png";
+import footerLeaf1 from "../../Jasons Tree/assets/images/whyChoseleaf-3.png";
 import footerLogo from "../../Jasons Tree/assets/images/footerlogo.png";
 import phoneIcon from "../../Jasons Tree/assets/svg/phone.svg";
 import clockIcon from "../../Jasons Tree/assets/svg/clock.svg";

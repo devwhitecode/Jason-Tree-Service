@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import lastLeaf from "../../Jasons Tree/assets/images/lastLeafHeroPage.png";
-import leafTwo from "../../Jasons Tree/assets/images/leaf-2.png";
+import lastLeaf from "../../Jasons Tree/assets/images/whyChoseleaf-3.png";
+import leafTwo from "../../Jasons Tree/assets/images/serviceleaf-1.png";
 import whyLeaf1 from "../../Jasons Tree/assets/images/whyChoseleaf-3.png";
 import whyLeaf2 from "../../Jasons Tree/assets/images/whychoseleaf-4.png";
 import leafIcon from "../../Jasons Tree/assets/svg/mobildeMenuLeafsvg.svg";

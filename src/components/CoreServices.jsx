@@ -3,7 +3,7 @@ import serviceSvg1 from "../../Jasons Tree/assets/svg/serviceSvg1.svg";
 import serviceSvg2 from "../../Jasons Tree/assets/svg/serviceSvg2.svg";
 import serviceSvg3 from "../../Jasons Tree/assets/svg/serviceSvg3.svg";
 import serviceLeaf1 from "../../Jasons Tree/assets/images/serviceleaf-1.png";
-import serviceLeaf2 from "../../Jasons Tree/assets/images/serviceleaf-2.png";
+import serviceLeaf2 from "../../Jasons Tree/assets/images/whychoseleaf-4.png";
 import serviceCard1 from "../../Jasons Tree/assets/images/servicecardimage-1.png";
 import serviceCard2 from "../../Jasons Tree/assets/images/servicecard-image-2.png";
 import serviceCard3 from "../../Jasons Tree/assets/images/servicecard-image-3.png";
