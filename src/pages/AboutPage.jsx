@@ -80,7 +80,7 @@ const AboutPage = () => {
       <SlidingText text="Family-Owned Business • Licensed & Insured • Commercial Tree Services Los Angeles • Tree Removal Los Angeles • 24/7 Emergency Response" />
 
       <section className="relative px-5 sm:px-16 py-12 sm:py-20 overflow-hidden">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
           <div className="flex flex-col gap-4 sm:gap-5">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-[#6DC642] flex items-center justify-center shadow-lg">
@@ -100,15 +100,16 @@ const AboutPage = () => {
               We're not just a vendor—we're a family business that treats every residential yard and commercial complex with the same attention to detail. Our crews understand tight timelines, guest-facing properties, and the importance of zero-damage service. That's why property managers, HOAs, and families across Los Angeles County and Orange County call us first.
             </p>
           </div>
-          <div className="relative">
-            <div className="rounded-3xl overflow-hidden">
+          <div className="relative h-full">
+            <div className="rounded-3xl overflow-hidden h-full">
               <img 
-                src={fw4} 
+                src={familyMain} 
                 alt="Family owned tree service crew" 
-                className="w-full h-full aspect-[4/3] object-cover" 
+                className="w-full h-full object-cover" 
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
+                style={{ imageRendering: 'smooth' }}
               />
             </div>
           </div>
@@ -437,8 +438,9 @@ const AboutPage = () => {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-200/50">
-              <div className="flex items-center gap-4 mb-6">
+            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-200/50 relative overflow-hidden">
+              <img src={whyChoseLeaf3} alt="" className="absolute -right-8 -top-8 w-32 sm:w-40 opacity-20 object-contain" />
+              <div className="flex items-center gap-4 mb-6 relative z-10">
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#6DC642] to-[#5AB032] flex items-center justify-center shadow-md">
                   <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
@@ -446,7 +448,7 @@ const AboutPage = () => {
                 </div>
                 <h3 className="Akria text-xl sm:text-2xl text-[#0F0F0F]">Standard Service Hours</h3>
               </div>
-              <div className="flex flex-col gap-3 AvantLight text-base leading-7 text-[#2C2C2C]">
+              <div className="flex flex-col gap-3 AvantLight text-base leading-7 text-[#2C2C2C] relative z-10">
                 <div className="flex items-center gap-3">
                   <span className="w-2 h-2 rounded-full bg-[#6DC642]" aria-hidden="true" />
                   <p>Monday – Friday: 7:00 AM – 7:00 PM</p>
@@ -466,7 +468,6 @@ const AboutPage = () => {
               </div>
             </div>
             <div className="bg-gradient-to-br from-[#358D0A] to-[#2D7308] text-white rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-              <img src={whyChoseLeaf3} alt="" className="absolute -right-8 -top-8 w-32 sm:w-40 opacity-20 object-contain" />
               <div className="flex items-center gap-4 mb-6 relative z-10">
                 <div className="w-14 h-14 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-lg">
                   <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">

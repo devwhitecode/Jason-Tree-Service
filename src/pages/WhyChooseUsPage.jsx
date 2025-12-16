@@ -11,6 +11,8 @@ import serviceSvg3 from "../../Jasons Tree/assets/svg/serviceSvg3.svg";
 import fw4 from "../../Jasons Tree/assets/images/fw-4.png";
 import fw6 from "../../Jasons Tree/assets/images/fw-6.png";
 import mwp3 from "../../Jasons Tree/assets/images/mwp-3.png";
+import whyChooseImage1 from "../../Jasons Tree/assets/images/whyChooseImage-1.png";
+import whyChoseImage2 from "../../Jasons Tree/assets/images/whyChoseimage-2.png";
 
 const items = [
   {
@@ -65,15 +67,6 @@ const items = [
     svg: (
       <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
         <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Family-Owned Business",
-    body: "You work directly with a family team that treats every property like our own. Personal care with professional results.",
-    svg: (
-      <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
       </svg>
     ),
   },
@@ -201,21 +194,21 @@ const WhyChooseUsPage = () => {
         </div>
       </section>
 
-      <section className="relative px-5 sm:px-16 py-12 sm:py-20 overflow-hidden">
+      <section className="relative px-5 sm:px-16 pt-0 pb-12 sm:pb-20 overflow-hidden">
         <img src={mwp3} alt="" className="absolute top-[15%] left-[5%] w-14 sm:w-18 opacity-8 pointer-events-none" />
         
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div className="relative order-2 lg:order-1 group">
-            <div className="rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
+          <div className="relative order-2 lg:order-1 group h-full">
+            <div className="rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700 h-full">
               <img 
                 ref={(el) => (imageRefs.current[0] = el)}
-                src={fw4} 
+                src={whyChooseImage1} 
                 alt="Professional crew on commercial site" 
-                className="w-full h-full aspect-[4/3] object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1 group-hover:brightness-105" 
+                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1 group-hover:brightness-105" 
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
-                style={{ willChange: 'transform' }}
+                style={{ willChange: 'transform', imageRendering: 'smooth' }}
               />
             </div>
           </div>
@@ -286,7 +279,7 @@ const WhyChooseUsPage = () => {
       <section className="relative px-5 sm:px-16 py-12 sm:py-20 overflow-hidden">
         <img src={mwp3} alt="" className="absolute bottom-[10%] right-[4%] w-14 sm:w-18 opacity-8 pointer-events-none" />
         
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
           <div className="flex flex-col gap-5">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-[#6DC642] flex items-center justify-center shadow-lg">
@@ -325,16 +318,16 @@ const WhyChooseUsPage = () => {
             </div>
           </div>
           
-          <div className="relative group">
-            <div className="rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700">
+          <div className="relative group h-full">
+            <div className="rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700 h-full">
               <img 
                 ref={(el) => (imageRefs.current[1] = el)}
-                src={fw6} 
+                src={whyChoseImage2} 
                 alt="Family-owned tree service crew at work" 
-                className="w-full h-full aspect-[4/3] object-cover transition-all duration-700 group-hover:scale-110 group-hover:-rotate-1 group-hover:brightness-105" 
+                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:-rotate-1 group-hover:brightness-105" 
                 loading="lazy"
                 decoding="async"
-                style={{ willChange: 'transform' }}
+                style={{ willChange: 'transform', imageRendering: 'smooth' }}
               />
             </div>
           </div>

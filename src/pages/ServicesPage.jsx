@@ -352,7 +352,7 @@ const ServicesPage = () => {
                   : "opacity-0 rotate-45"
               }`}
             />
-            <div className={`max-w-6xl mx-auto grid grid-cols-1 ${idx % 2 === 0 ? 'sm:grid-cols-2' : 'sm:grid-cols-2'} gap-8 sm:gap-12 items-center`}>
+            <div className={`max-w-6xl mx-auto grid grid-cols-1 ${idx % 2 === 0 ? 'sm:grid-cols-2' : 'sm:grid-cols-2'} gap-8 sm:gap-12 items-start`}>
               <div className={`flex flex-col gap-4 ${idx % 2 === 1 ? 'sm:order-2' : ''}`}>
                 <div
                   className={`flex items-center gap-3 transition-all duration-700 ease-out ${
@@ -426,8 +426,9 @@ const ServicesPage = () => {
                       ? "opacity-100 translate-x-0 scale-100"
                       : `opacity-0 ${idx % 2 === 0 ? 'translate-x-12' : '-translate-x-12'} scale-90`
                   }`}
+                  style={{ maxHeight: '450px', height: 'fit-content' }}
                 >
-                  <img src={category.accent} alt={category.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+                  <img src={category.accentSmall} alt={category.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" style={{ imageRendering: 'smooth', maxHeight: '450px', width: '100%', objectFit: 'cover' }} />
                 </div>
                 <div
                   className={`absolute -bottom-8 ${idx % 2 === 0 ? '-right-6' : '-left-6'} w-40 sm:w-56 rounded-2xl overflow-hidden shadow-xl transition-all duration-1000 delay-400 ease-out hover:scale-105 ${
