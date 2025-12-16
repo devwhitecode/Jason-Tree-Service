@@ -52,7 +52,7 @@ const Banner = () => {
   return (
     <div
       ref={bannerRef}
-      className="relative section4 w-full pt-[80px] pb-[80px] mt-12 sm:pt-[80px] sm:pb-[80px] sm:mt-7 flex items-center justify-center"
+      className="relative section4 w-full pt-0 pb-[80px] mt-12 sm:pt-0 sm:pb-[80px] sm:mt-7 flex items-center justify-center"
     >
       <div
         className={`relative bg-[#356020] w-[75%] pt-8 pb-0 sm:py-16 flex flex-col sm:flex-row text-center pl-5 rounded-2xl transition-all duration-1000 ease-out ${

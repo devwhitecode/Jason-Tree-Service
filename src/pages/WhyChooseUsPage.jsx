@@ -13,6 +13,7 @@ import fw6 from "../../Jasons Tree/assets/images/fw-6.png";
 import mwp3 from "../../Jasons Tree/assets/images/mwp-3.png";
 import whyChooseImage1 from "../../Jasons Tree/assets/images/whyChooseImage-1.png";
 import whyChoseImage2 from "../../Jasons Tree/assets/images/whyChoseimage-2.png";
+import side45 from "../../Jasons Tree/assets/images/side 45.jpg";
 
 const items = [
   {
@@ -149,7 +150,7 @@ const WhyChooseUsPage = () => {
 
       <SlidingText text="24/7 Emergency Response • Free Estimates • Licensed & Insured • Commercial Tree Specialists • Palm Tree Trimming Los Angeles" />
 
-      <section className="relative px-5 sm:px-16 py-12 sm:py-20 overflow-hidden">
+      <section className="relative px-5 sm:px-16 pt-0 pb-12 sm:pb-20 overflow-hidden">
         <img src={mwp3} alt="" className="absolute top-[5%] right-[3%] w-16 sm:w-20 opacity-8 pointer-events-none" />
         <img src={mwp3} alt="" className="absolute bottom-[10%] left-[2%] w-14 sm:w-18 opacity-8 pointer-events-none" />
         
@@ -202,7 +203,7 @@ const WhyChooseUsPage = () => {
             <div className="rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700 h-full">
               <img 
                 ref={(el) => (imageRefs.current[0] = el)}
-                src={whyChooseImage1} 
+                src={side45} 
                 alt="Professional crew on commercial site" 
                 className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1 group-hover:brightness-105" 
                 loading="eager"
@@ -271,6 +272,35 @@ const WhyChooseUsPage = () => {
                   <strong className="AvantBold">Emergency Response:</strong> Palm Tree Trimming Los Angeles resorts need or storm cleanup—we dispatch rapidly with full equipment.
                 </p>
               </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="mt-1 w-10 h-10 rounded-xl bg-gradient-to-br from-[#6DC642] to-[#5AB032] flex items-center justify-center flex-shrink-0 shadow-md transition-all duration-300 hover:scale-110 hover:rotate-12">
+                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <p className="AvantLight text-base sm:text-lg text-[#2C2C2C] leading-7">
+                  <strong className="AvantBold">Licensed & Insured:</strong> Fully bonded, California State licensed, and comprehensively insured for complete protection and peace of mind on every project.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 mt-4">
+              <button
+                type="button"
+                onClick={() => {
+                  window.dispatchEvent(new Event("highlightContactForm"));
+                  onNavigate?.("contact");
+                }}
+                className="px-6 py-3 text-sm sm:text-base AvantBold rounded-2xl rounded-tr-none bg-[#6DC642] text-white transition-all duration-300 hover:bg-[#5AB032] hover:-translate-y-1 hover:scale-105 hover:shadow-2xl"
+              >
+                Get Free Estimate
+              </button>
+              <a
+                href="tel:+18055353739"
+                className="px-6 py-3 text-sm sm:text-base AvantBold rounded-2xl rounded-tr-none border border-gray-200 text-[#0F0F0F] bg-white/20 transition-all duration-300 hover:border-[#6DC642] hover:-translate-y-1 hover:scale-105 text-center"
+              >
+                Call Now
+              </a>
             </div>
           </div>
         </div>
@@ -315,6 +345,24 @@ const WhyChooseUsPage = () => {
                 <span className="w-2 h-2 rounded-full bg-[#6DC642]" />
                 <p className="AvantLight text-base text-[#2C2C2C]">Long-term relationships built on trust</p>
               </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 mt-4">
+              <button
+                type="button"
+                onClick={() => {
+                  window.dispatchEvent(new Event("highlightContactForm"));
+                  onNavigate?.("contact");
+                }}
+                className="px-6 py-3 text-sm sm:text-base AvantBold rounded-2xl rounded-tr-none bg-[#6DC642] text-white transition-all duration-300 hover:bg-[#5AB032] hover:-translate-y-1 hover:scale-105 hover:shadow-2xl"
+              >
+                Get Free Estimate
+              </button>
+              <a
+                href="tel:+18055353739"
+                className="px-6 py-3 text-sm sm:text-base AvantBold rounded-2xl rounded-tr-none border border-gray-200 text-[#0F0F0F] bg-white/20 transition-all duration-300 hover:border-[#6DC642] hover:-translate-y-1 hover:scale-105 text-center"
+              >
+                Call Now
+              </a>
             </div>
           </div>
           

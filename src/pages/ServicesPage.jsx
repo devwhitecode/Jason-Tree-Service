@@ -37,7 +37,7 @@ const serviceCategories = [
     title: "Tree Care & Maintenance",
     icon: serviceSvg1,
     accent: tc1,
-    accentSmall: tc2,
+    accentSmall: serviceWhyOverlay,
     description:
       "Healthy trees reduce risk and boost curb appeal. Perfect for homes, shopping centers, and retail properties.",
     bullets: [
@@ -428,7 +428,7 @@ const ServicesPage = () => {
                   }`}
                   style={{ maxHeight: '450px', height: 'fit-content' }}
                 >
-                  <img src={category.accentSmall} alt={category.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" style={{ imageRendering: 'smooth', maxHeight: '450px', width: '100%', objectFit: 'cover' }} />
+                  <img src={category.accent} alt={category.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" style={{ imageRendering: 'smooth', maxHeight: '450px', width: '100%', objectFit: 'cover' }} />
                 </div>
                 <div
                   className={`absolute -bottom-8 ${idx % 2 === 0 ? '-right-6' : '-left-6'} w-40 sm:w-56 rounded-2xl overflow-hidden shadow-xl transition-all duration-1000 delay-400 ease-out hover:scale-105 ${
@@ -445,7 +445,7 @@ const ServicesPage = () => {
         ))}
       </section>
 
-      <section className="relative px-5 sm:px-16 py-16 sm:py-20 overflow-hidden">
+      <section className="relative px-5 sm:px-16 pt-16 pb-0 sm:pt-20 sm:pb-0 overflow-hidden">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="Akria text-3xl sm:text-4xl mb-4">
             Ready to <span className="text-[#6DC642]">Transform Your Property?</span>
