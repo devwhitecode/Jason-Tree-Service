@@ -135,8 +135,19 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="relative px-5 sm:px-16 py-10 sm:py-14 overflow-hidden">
-        <img src={mwp3} alt="" className="absolute bottom-[15%] right-[8%] w-20 sm:w-28 opacity-15 pointer-events-none" />
+      <section className="relative px-5 sm:px-16 py-10 sm:py-14 overflow-hidden group">
+        <img
+          src={mwp3}
+          alt=""
+          aria-hidden="true"
+          className="leaf-float hidden sm:block absolute bottom-[12%] sm:bottom-[15%] left-2 sm:left-[8%] w-16 sm:w-20 sm:w-28 opacity-15 scroll-animate fade-rotate transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-105"
+        />
+        <img
+          src={mwp3}
+          alt=""
+          aria-hidden="true"
+          className="leaf-float hidden sm:block absolute bottom-[12%] sm:bottom-[15%] right-2 sm:right-[8%] w-16 sm:w-20 sm:w-28 opacity-15 scroll-animate fade-rotate transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-105"
+        />
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           <div className="group relative bg-white/60 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-200/50">
             <div className="absolute top-0 right-0 w-24 h-24 bg-[#6DC642]/5 rounded-bl-[100px] transition-all duration-500 group-hover:w-32 group-hover:h-32"></div>
@@ -216,8 +227,19 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="relative px-5 sm:px-16 py-12 sm:py-20 overflow-hidden">
-        <img src={mwp3} alt="" className="absolute top-[15%] right-[3%] w-16 sm:w-24 opacity-20 pointer-events-none" />
+      <section className="relative px-5 sm:px-16 py-12 sm:py-20 overflow-hidden group">
+        <img
+          src={mwp3}
+          alt=""
+          aria-hidden="true"
+          className="leaf-float hidden sm:block absolute top-[12%] sm:top-[15%] right-[3%] sm:right-[3%] w-12 sm:w-16 sm:w-24 opacity-100 filter brightness-110 transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-105"
+        />
+        <img
+          src={mwp3}
+          alt=""
+          aria-hidden="true"
+          className="leaf-float hidden sm:block absolute top-[12%] sm:top-[15%] left-[3%] sm:left-[3%] w-12 sm:w-16 sm:w-24 opacity-100 filter brightness-110 transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-105"
+        />
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="relative order-2 lg:order-1">
             <div className="rounded-3xl overflow-hidden">

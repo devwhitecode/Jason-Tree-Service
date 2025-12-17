@@ -15,8 +15,7 @@ import serviceWhyOverlay from "../../Jasons Tree/assets/images/servicecard-image
 import serviceLeaf from "../../Jasons Tree/assets/images/servicepageleaf-1.png";
 import serviceLeaf1 from "../../Jasons Tree/assets/images/serviceleaf-1.png";
 import serviceLeaf2 from "../../Jasons Tree/assets/images/serviceleaf-2.png";
-import lastLeaf from "../../Jasons Tree/assets/images/lastLeafHeroPage.png";
-import leafTwo from "../../Jasons Tree/assets/images/leaf-2.png";
+import whyChoseLeaf3 from "../../Jasons Tree/assets/images/whyChoseleaf-3.png";
 import leafIcon from "../../Jasons Tree/assets/svg/mobildeMenuLeafsvg.svg";
 import tc1 from "../../Jasons Tree/assets/images/tc-1.png";
 import tc2 from "../../Jasons Tree/assets/images/tc-2.png";
@@ -207,8 +206,8 @@ const ServicesPage = () => {
       <SlidingText text="Los Angeles County Tree Service  •  Commercial Tree Services Los Angeles  •  Palm Tree Trimming Los Angeles  •  24/7 Emergency Tree Service LA" />
 
       <section ref={introRef} className="relative px-5 sm:px-16 py-16 sm:py-24 overflow-hidden">
-        <img
-          src={lastLeaf}
+          <img
+            src={whyChoseLeaf3}
           alt=""
           className={`hidden sm:block w-28 sm:w-44 absolute top-[5%] right-0 z-[9990] cursor-pointer touch-none ${
             isIntroVisible
@@ -226,7 +225,7 @@ const ServicesPage = () => {
           }}
         />
         <img
-          src={leafTwo}
+          src={serviceLeaf1}
           alt=""
           className={`w-28 absolute top-[60%] left-0 z-[9990] cursor-pointer touch-none ${
             isIntroVisible
@@ -326,7 +325,7 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      <section className="w-full py-12 sm:py-16">
+      <section className="w-full pt-12 pb-0 sm:pt-16 sm:pb-0">
         <div className="max-w-6xl mx-auto px-5 sm:px-16 text-center pb-10">
           <h2 className="Akria text-2xl sm:text-4xl mb-3">
             Our <span className="text-[#6DC642]">Specialized Services</span>
@@ -445,7 +444,7 @@ const ServicesPage = () => {
         ))}
       </section>
 
-      <section className="relative px-5 sm:px-16 pt-16 pb-0 sm:pt-20 sm:pb-0 overflow-hidden">
+      <section className="relative px-5 sm:px-16 pt-0 pb-0 sm:pt-0 sm:pb-0 overflow-hidden">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="Akria text-3xl sm:text-4xl mb-4">
             Ready to <span className="text-[#6DC642]">Transform Your Property?</span>

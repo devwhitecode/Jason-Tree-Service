@@ -150,9 +150,19 @@ const WhyChooseUsPage = () => {
 
       <SlidingText text="24/7 Emergency Response • Free Estimates • Licensed & Insured • Commercial Tree Specialists • Palm Tree Trimming Los Angeles" />
 
-      <section className="relative px-5 sm:px-16 pt-20 pb-12 sm:pb-20 overflow-hidden">
-        <img src={mwp3} alt="" className="absolute top-[5%] right-[3%] w-16 sm:w-20 opacity-8 pointer-events-none" />
-        <img src={mwp3} alt="" className="absolute bottom-[10%] left-[2%] w-14 sm:w-18 opacity-8 pointer-events-none" />
+      <section className="relative px-5 sm:px-16 pt-20 pb-12 sm:pb-20 overflow-hidden group">
+        <img
+          src={mwp3}
+          alt=""
+          aria-hidden="true"
+          className="leaf-float hidden sm:block absolute top-[5%] right-[3%] w-16 sm:w-20 opacity-100 filter brightness-110 transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-105 pointer-events-none"
+        />
+        <img
+          src={mwp3}
+          alt=""
+          aria-hidden="true"
+          className="leaf-float hidden sm:block absolute top-[5%] left-[3%] w-16 sm:w-20 opacity-100 filter brightness-110 transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-105 pointer-events-none"
+        />
         
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center text-center gap-4 mb-10 sm:mb-14">
@@ -196,7 +206,6 @@ const WhyChooseUsPage = () => {
       </section>
 
       <section className="relative px-5 sm:px-16 pt-0 pb-12 sm:pb-20 overflow-hidden">
-        <img src={mwp3} alt="" className="absolute top-[15%] left-[5%] w-14 sm:w-18 opacity-8 pointer-events-none" />
         
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
           <div className="relative order-2 lg:order-1 group h-full">
@@ -306,8 +315,7 @@ const WhyChooseUsPage = () => {
         </div>
       </section>
 
-      <section className="relative px-5 sm:px-16 py-12 sm:py-20 overflow-hidden">
-        <img src={mwp3} alt="" className="absolute bottom-[10%] right-[4%] w-14 sm:w-18 opacity-8 pointer-events-none" />
+      <section className="relative px-5 sm:px-16 pt-0 pb-12 sm:pb-20 overflow-hidden">
         
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
           <div className="flex flex-col gap-5">
