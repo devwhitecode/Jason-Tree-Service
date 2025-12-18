@@ -80,7 +80,7 @@ const Header = ({ onNavigate, onMenuToggle, isMenuOpen, activeSection = "home" }
       <button
         type="button"
         onClick={onMenuToggle}
-        className="flex justify-start items-center gap-2 sm:hidden text-[#0F0F0F] text-lg hover:text-[#6DC642] transition-colors duration-300"
+        className="flex justify-start items-center gap-2 sm:hidden text-[#0F0F0F] text-lg font-semibold sm:font-normal hover:text-[#6DC642] transition-colors duration-300"
         aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
       >
         <img
