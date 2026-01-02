@@ -25,10 +25,58 @@ import newM1 from "../../Jasons Tree/assets/images/newM-1.png";
 import newM2 from "../../Jasons Tree/assets/images/newM-2.png";
 import newM3 from "../../Jasons Tree/assets/images/newM-3.png";
 import newM4 from "../../Jasons Tree/assets/images/newM-4.png";
+import flyer1 from "../../Jasons Tree/assets/images/FLYER 1.jpeg";
+import flyer2 from "../../Jasons Tree/assets/images/FLYER 2.jpeg";
+import flyer3 from "../../Jasons Tree/assets/images/FLYER 3.jpeg";
+import flyer4 from "../../Jasons Tree/assets/images/FLYER 4.jpeg";
+import flyer5 from "../../Jasons Tree/assets/images/FLYER 5.jpeg";
+import flyer6 from "../../Jasons Tree/assets/images/FLYER 6.jpeg";
+import flyer8 from "../../Jasons Tree/assets/images/FLYER 8.jpeg";
+import flyer9 from "../../Jasons Tree/assets/images/FLYER 9.jpeg";
+import flyer10 from "../../Jasons Tree/assets/images/FLYER 10.jpeg";
+import flyerr7 from "../../Jasons Tree/assets/images/FLYERR 7.jpeg";
+import flyerr9 from "../../Jasons Tree/assets/images/FLYERR 9.jpeg";
+import flyerr10 from "../../Jasons Tree/assets/images/FLYERR 10.jpeg";
+import flyer11 from "../../Jasons Tree/assets/images/flyer 11.jpeg";
+import flyer12 from "../../Jasons Tree/assets/images/flyer 12.jpeg";
+import flyer13 from "../../Jasons Tree/assets/images/flyer 13.webp";
+import flyer14 from "../../Jasons Tree/assets/images/flyer 14.jpeg";
+import flyer15 from "../../Jasons Tree/assets/images/flyer 15.jpeg";
+import flyer16 from "../../Jasons Tree/assets/images/flyer 16.jpeg";
+import flyer17 from "../../Jasons Tree/assets/images/flyer 17.webp";
+import flyer18 from "../../Jasons Tree/assets/images/flyer 18 .jpeg";
+import flyer19 from "../../Jasons Tree/assets/images/flyer 19.webp";
+import flyer20 from "../../Jasons Tree/assets/images/flyer 20.jpeg";
+import flyer7 from "../../Jasons Tree/assets/images/flyer 7.jpeg";
+import flyerr18 from "../../Jasons Tree/assets/images/flyerr 18.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const galleryItems = [
+  { src: flyer1, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer2, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer3, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer4, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer5, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer6, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer7, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer8, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer9, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer10, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer11, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer12, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer13, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer14, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer15, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer16, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer17, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer18, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer19, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyer20, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyerr7, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyerr9, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyerr10, category: "All", caption: "Jayson's Tree Service" },
+  { src: flyerr18, category: "All", caption: "Jayson's Tree Service" },
   { src: fw1, category: "Commercial Projects", caption: "Commercial tree clearing and maintenance for retail plaza" },
   { src: fw2, category: "Residential Work", caption: "Professional tree trimming for residential property" },
   { src: fw3, category: "Palm Tree Jobs", caption: "Palm tree trimming and maintenance Los Angeles" },

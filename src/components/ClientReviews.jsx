@@ -3,34 +3,40 @@ import Angi from "../../Jasons Tree/assets/svg/Angi.svg";
 
 const reviews = [
   {
-    text: "Fast, professional and great pricing. They cleaned everything perfectly!",
-    author: "Maria Rodriguez",
+    text: "Job well done.",
+    author: "Curtis R.",
     rating: 5,
-    location: "Los Angeles, CA"
+    location: "Ventura, CA",
   },
   {
-    text: "Excellent service! Professional crew and thorough cleanup. Highly recommend!",
-    author: "John Davidson",
+    text: "Excellent job guys . It looks great",
+    author: "Janet G.",
     rating: 5,
-    location: "Orange County, CA"
+    location: "Ventura, CA",
   },
   {
-    text: "Quick emergency response after the storm. Great job and fair price!",
-    author: "Sarah Mitchell",
+    text: "Very professional and efficient. Hired him to cut a tree, was on time and Did a great job!!! Highly recommend!",
+    author: "Evelyn R.",
     rating: 5,
-    location: "Irvine, CA"
+    location: "Ventura, CA",
   },
   {
-    text: "Best tree service in LA! Safe removal and perfect cleanup.",
-    author: "Robert Chen",
+    text: "Jayson's Tree Services came out quickly and gave us a bid. It was very reasonable, and they removed the tree the next day! They were prompt and did careful, safe and thorough work. They cleaned up the site and even put a tarp over the damaged roof area! I was very pleased with their work and would hire them again!",
+    author: "Lori J.",
     rating: 5,
-    location: "Pasadena, CA"
+    location: "Ventura, CA",
   },
   {
-    text: "Outstanding work on our commercial property. Professional and on schedule!",
-    author: "Jennifer Martinez",
+    text: "They worked fast, efficiently and safely, leaving the property in pristine condition. Their price was very competitive and their service top notch. They did work beyond the scope of the proposed estimate and had excellent communication with us on a daily basis. We plan on hiring them again for the next phase of our landscaping work.",
+    author: "Patria C.",
     rating: 5,
-    location: "Santa Ana, CA"
+    location: "Ventura, CA",
+  },
+  {
+    text: "They were on time both for the estimate and the work. The work was done completely and professionally and the cleanup was unbelievably good. I highly recommend them and I'd rehire them in a heartbeat.",
+    author: "Robert B.",
+    rating: 5,
+    location: "Ventura, CA",
   },
 ];
 
@@ -58,10 +64,10 @@ const ClientReviews = () => {
 
   return (
     <div className="section6 h-fit py-20 w-full px-5 sm:px-16">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row gap-12 sm:gap-16 items-start">
           {/* Left Side - Info */}
-          <div className="w-full sm:w-[40%] flex flex-col gap-6">
+          <div className="w-full sm:w-[25%] flex flex-col gap-6">
             <div className="flex flex-col items-center sm:items-start gap-6">
               <h1 className="text-[#0F0F0F] Akria text-3xl sm:text-4xl font-bold text-center sm:text-start leading-tight">
                 CLIENT <br />
@@ -73,6 +79,14 @@ const ClientReviews = () => {
             <p className="AvantLight text-base sm:text-lg leading-7 text-[#2C2C2C] font-medium text-center sm:text-left">
               Our clients consistently highlight our fast response times, professional crew, and high-quality results. From homeowners to large commercial property managers, we're trusted across Los Angeles and Orange County for reliable, safe, and efficient tree services.
             </p>
+            <a
+              href="https://www.angi.com/companylist/us/ca/ventura/jayson%27s-tree-services-reviews-9978565.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-[#6DC642] text-[#356020] py-3 px-6 w-fit mx-auto sm:mx-0 rounded-b-2xl rounded-tl-2xl AvantBold hover:bg-[#6DC642] hover:text-white hover:scale-105 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 cursor-pointer inline-block"
+            >
+              View more reviews
+            </a>
             
             <a
               href="#contact-form"
@@ -87,8 +101,8 @@ const ClientReviews = () => {
           </div>
 
           {/* Right Side - Reviews Slider */}
-          <div className="w-full sm:w-[60%]">
-            <div className="relative bg-gradient-to-br from-white/95 to-white/90 backdrop-blur-md p-8 sm:p-12 rounded-3xl shadow-2xl border border-gray-100">
+          <div className="w-full sm:w-[75%]">
+            <div className="relative bg-gradient-to-br from-white/95 to-white/90 backdrop-blur-md p-10 sm:p-14 rounded-3xl shadow-2xl border border-gray-100">
               {/* Stars */}
               <div className="flex gap-2 justify-center mb-8">
                 {[...Array(5)].map((_, i) => (
@@ -104,7 +118,7 @@ const ClientReviews = () => {
               </div>
 
               {/* Review Content */}
-              <div className="relative min-h-[220px] sm:min-h-[200px] mb-8">
+              <div className="relative min-h-[260px] sm:min-h-[240px] mb-8">
                 {reviews.map((review, index) => (
                   <div
                     key={index}
@@ -114,43 +128,20 @@ const ClientReviews = () => {
                         : "opacity-0 scale-95 pointer-events-none"
                     }`}
                   >
-                    {/* Quote Icon */}
-                    <div className="flex justify-center mb-3 sm:mb-4">
-                      <svg className="w-10 h-10 sm:w-14 sm:h-14 text-[#6DC642] opacity-20" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                      </svg>
+                    {/* Author moved to top */}
+                    <div className="flex justify-center mb-2 sm:mb-3">
+                      <p className="AvantBold text-sm sm:text-lg text-[#356020] text-center">
+                        {review.author}
+                      </p>
                     </div>
                     
-                    <p className="Akria text-base sm:text-xl text-[#0F0F0F] text-center leading-relaxed px-1 sm:px-4" style={{ lineHeight: '1.6', letterSpacing: '0.3px' }}>
+                    <p className="Akria text-sm sm:text-lg text-[#0F0F0F] text-center leading-relaxed px-1 sm:px-4 break-words" style={{ lineHeight: '1.6', letterSpacing: '0.3px' }}>
                       {review.text}
                     </p>
                   </div>
                 ))}
               </div>
 
-              {/* Author Info - Fixed height section */}
-              <div className="relative h-16 sm:h-20 mb-6">
-                {reviews.map((review, index) => (
-                  <div
-                    key={index}
-                    className={`absolute inset-0 transition-all duration-700 flex flex-col items-center justify-center ${
-                      index === activeIndex
-                        ? "opacity-100"
-                        : "opacity-0"
-                    }`}
-                  >
-                    <p className="AvantBold text-base sm:text-xl text-[#356020] text-center">
-                      {review.author}
-                    </p>
-                    <p className="AvantLight text-xs sm:text-base text-[#6DC642] text-center mt-2 flex items-center justify-center gap-1 sm:gap-2">
-                      <svg className="w-3 h-3 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                      </svg>
-                      {review.location}
-                    </p>
-                  </div>
-                ))}
-              </div>
 
               {/* Pagination Dots */}
               <div className="flex justify-center gap-3 mt-8">

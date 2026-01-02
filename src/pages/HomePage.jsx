@@ -129,6 +129,15 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Floating License Button (Home only) */}
+      <button
+        type="button"
+        className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-[1000] bg-[#6DC642] text-white AvantBold uppercase text-xs sm:text-sm tracking-[0.2em] px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-transform duration-200 hover:-translate-y-0.5"
+        aria-label="Company license number CA STATE LIC #1104641"
+      >
+        CA STATE LIC #1104641
+      </button>
+
       <SlidingText text="25% OFF  --  Palm Tree Services (10+ Palms)" />
 
       <section id="about">

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import logo from "../../Jasons Tree/assets/images/logo.png";
 import mobileMenuButton from "../../Jasons Tree/assets/svg/mobileMenuButton.svg";
@@ -17,6 +18,17 @@ const navRight = [
 
 const Header = ({ onNavigate, onMenuToggle, isMenuOpen, activeSection = "home" }) => {
   const location = useLocation();
+  const [isHidden, setIsHidden] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const y = window.scrollY || 0;
+      // Hide whenever scrolled past 80px; only show again when back near the very top
+      setIsHidden(y > 80);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const renderLink = ({ label, key }) => {
     const pathHref = key === "home" ? "/" : `/${key}`;
@@ -55,7 +67,7 @@ const Header = ({ onNavigate, onMenuToggle, isMenuOpen, activeSection = "home" }
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 w-full px-4 py-5 sm:py-8 flex justify-between sm:justify-center items-center gap-20 z-[999] AvantLight">
+    <header className={`fixed top-0 left-0 right-0 w-full px-4 py-5 sm:py-8 flex justify-between sm:justify-center items-center gap-20 z-[999] AvantLight transition-transform duration-300 ${isHidden ? "-translate-y-full" : "translate-y-0"}`}>
       <div className="hidden sm:flex justify-start text-[#0F0F0F] items-center gap-10 text-base">
         {navLeft.map((link) => (
           <span key={link.key}>{renderLink(link)}</span>
