@@ -107,7 +107,7 @@ const HomePage = () => {
               </div>
             </div>
 
-            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center px-4 sm:px-8 z-[50]">
+            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center px-4 sm:px-8 sm:pt-[100px] z-[50]">
               <h1
                 className="relative text-center text-4xl sm:text-5xl lg:text-6xl Akria text-[#0F0F0F] hero-heading"
                 style={{ lineHeight: "1.2" }}

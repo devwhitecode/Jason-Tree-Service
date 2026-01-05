@@ -121,12 +121,12 @@ const Footer = ({ onNavigate }) => (
                 <h1>Response Available</h1>
               </span>
             </div>
-            <a 
-              href="mailto:info@jaysonstreeservice.com" 
+            <a
+              href="mailto:jaysontreeservice@gmail.com"
               className="flex gap-2 items-center hover:text-[#6DC642] transition-all duration-300 hover:scale-105 cursor-pointer group"
             >
               <img className="w-[7%] transition-transform duration-300 group-hover:scale-110" src={emailIcon} alt="Email" />
-              <h1 className="AvantLight font-lg font-semibold">info@jaysonstreeservice.com</h1>
+              <h1 className="AvantLight font-lg font-semibold">jaysontreeservice@gmail.com</h1>
             </a>
           </div>
         </div>
@@ -153,6 +153,7 @@ const Footer = ({ onNavigate }) => (
             Book your free estimate and get fast, reliable tree care for
             your home or commercial property.
           </p>
+          <p className="AvantLight text-xs mt-2">License #1104641</p>
         </div>
         <a
           href="#contact-form"

@@ -7,24 +7,6 @@ import Footer from "../components/Footer";
 import mainBg from "../../Jasons Tree/assets/images/mainbg.png";
 import heroDesktop from "../../Jasons Tree/assets/images/gallery_hero.jpg";
 import heroMobile from "../../Jasons Tree/assets/images/gallery_hero.jpg";
-import fw1 from "../../Jasons Tree/assets/images/fw-1.png";
-import fw2 from "../../Jasons Tree/assets/images/fw-2.png";
-import fw3 from "../../Jasons Tree/assets/images/fw-3.png";
-import fw4 from "../../Jasons Tree/assets/images/fw-4.png";
-import fw5 from "../../Jasons Tree/assets/images/fw-5.png";
-import fw6 from "../../Jasons Tree/assets/images/fw-6.png";
-import serviceCard1 from "../../Jasons Tree/assets/images/servicecardimage-1.png";
-import serviceCard2 from "../../Jasons Tree/assets/images/servicecard-image-2.png";
-import serviceCard3 from "../../Jasons Tree/assets/images/servicecard-image-3.png";
-import tc1 from "../../Jasons Tree/assets/images/tc-1.png";
-import tc2 from "../../Jasons Tree/assets/images/tc-2.png";
-import tc3 from "../../Jasons Tree/assets/images/tc-3.png";
-import tc4 from "../../Jasons Tree/assets/images/tc-4.png";
-import tc5 from "../../Jasons Tree/assets/images/tc-5.png";
-import newM1 from "../../Jasons Tree/assets/images/newM-1.png";
-import newM2 from "../../Jasons Tree/assets/images/newM-2.png";
-import newM3 from "../../Jasons Tree/assets/images/newM-3.png";
-import newM4 from "../../Jasons Tree/assets/images/newM-4.png";
 import flyer1 from "../../Jasons Tree/assets/images/FLYER 1.jpeg";
 import flyer2 from "../../Jasons Tree/assets/images/FLYER 2.jpeg";
 import flyer3 from "../../Jasons Tree/assets/images/FLYER 3.jpeg";
@@ -53,48 +35,30 @@ import flyerr18 from "../../Jasons Tree/assets/images/flyerr 18.jpeg";
 gsap.registerPlugin(ScrollTrigger);
 
 const galleryItems = [
-  { src: flyer1, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer2, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer3, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer4, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer5, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer6, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer7, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer8, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer9, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer10, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer11, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer12, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer13, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer14, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer15, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer16, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer17, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer18, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer19, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyer20, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyerr7, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyerr9, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyerr10, category: "All", caption: "Jayson's Tree Service" },
-  { src: flyerr18, category: "All", caption: "Jayson's Tree Service" },
-  { src: fw1, category: "Commercial Projects", caption: "Commercial tree clearing and maintenance for retail plaza" },
-  { src: fw2, category: "Residential Work", caption: "Professional tree trimming for residential property" },
-  { src: fw3, category: "Palm Tree Jobs", caption: "Palm tree trimming and maintenance Los Angeles" },
-  { src: fw4, category: "Emergency Response", caption: "Emergency storm damage tree removal service" },
-  { src: fw5, category: "Crew & Equipment", caption: "Professional crane-assisted tree removal operation" },
-  { src: fw6, category: "Commercial Projects", caption: "Commercial property tree service and cleanup" },
-  { src: serviceCard1, category: "Residential Work", caption: "Residential tree pruning and canopy maintenance" },
-  { src: serviceCard2, category: "Crew & Equipment", caption: "Expert crew performing precision tree work" },
-  { src: serviceCard3, category: "Palm Tree Jobs", caption: "Specialized palm tree care and shaping service" },
-  { src: tc1, category: "Residential Work", caption: "Quality residential tree care by licensed professionals" },
-  { src: tc2, category: "Commercial Projects", caption: "Large-scale commercial tree maintenance project" },
-  { src: tc3, category: "Crew & Equipment", caption: "Professional equipment for safe tree removal" },
-  { src: tc4, category: "Emergency Response", caption: "24/7 emergency tree service response team" },
-  { src: tc5, category: "Residential Work", caption: "Complete residential tree trimming service" },
-  { src: newM1, category: "Crew & Equipment", caption: "Expert arborists at work on tree care project" },
-  { src: newM2, category: "Commercial Projects", caption: "Commercial tree service for business properties" },
-  { src: newM3, category: "Residential Work", caption: "Professional tree maintenance for home landscapes" },
-  { src: newM4, category: "Emergency Response", caption: "Rapid response emergency tree removal" },
+  { src: flyer1, category: "Residential Work", caption: "Professional residential tree maintenance" },
+  { src: flyer2, category: "Palm Tree Jobs", caption: "Palm tree trimming and care service" },
+  { src: flyer3, category: "Residential Work", caption: "Residential tree trimming and removal" },
+  { src: flyer4, category: "Residential Work", caption: "Backyard tree removal and cleanup" },
+  { src: flyer5, category: "Crew & Equipment", caption: "Professional tree work with equipment" },
+  { src: flyer6, category: "Residential Work", caption: "High-end residential tree maintenance" },
+  { src: flyer8, category: "Residential Work", caption: "Tree removal in residential neighborhood" },
+  { src: flyer9, category: "Residential Work", caption: "Dead tree removal service" },
+  { src: flyer10, category: "Commercial Projects", caption: "Commercial palm tree trimming project" },
+  { src: flyer11, category: "Palm Tree Jobs", caption: "Multiple palm tree trimming service" },
+  { src: flyer12, category: "Residential Work", caption: "Large oak tree maintenance" },
+  { src: flyer13, category: "Palm Tree Jobs", caption: "Tall palm tree trimming Los Angeles" },
+  { src: flyer14, category: "Palm Tree Jobs", caption: "Palm tree removal and cleanup" },
+  { src: flyer15, category: "Residential Work", caption: "Estate palm tree trimming service" },
+  { src: flyer16, category: "Residential Work", caption: "Eucalyptus tree work residential" },
+  { src: flyer17, category: "Residential Work", caption: "Palm tree trimming in hillside property" },
+  { src: flyer18, category: "Residential Work", caption: "Large estate tree trimming" },
+  { src: flyer19, category: "Residential Work", caption: "Landscape tree maintenance service" },
+  { src: flyer20, category: "Palm Tree Jobs", caption: "Palm tree removal project" },
+  { src: flyerr7, category: "Palm Tree Jobs", caption: "Tall palm tree maintenance work" },
+  { src: flyerr9, category: "Residential Work", caption: "Dead tree removal residential" },
+  { src: flyerr10, category: "Commercial Projects", caption: "Commercial palm tree trimming with crew" },
+  { src: flyerr18, category: "Residential Work", caption: "Luxury home landscaping service" },
+  { src: flyer7, category: "Crew & Equipment", caption: "Professional crew at palm tree work" },
 ];
 
 const categories = [
@@ -102,7 +66,6 @@ const categories = [
   "Commercial Projects",
   "Residential Work",
   "Palm Tree Jobs",
-  "Emergency Response",
   "Crew & Equipment",
 ];
 

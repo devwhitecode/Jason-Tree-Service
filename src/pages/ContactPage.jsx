@@ -166,6 +166,9 @@ const ContactPage = () => {
                   <p className="AvantLight text-xs text-[#0F0F0F] opacity-70">
                     ✓ Licensed • Insured • Bonded
                   </p>
+                  <p className="AvantBold text-xs text-[#0F0F0F] opacity-70">
+                    License #1104641
+                  </p>
                 </div>
               </div>
             </div>
@@ -187,11 +190,11 @@ const ContactPage = () => {
                 </div>
               </div>
               <div className="relative space-y-3">
-                <a 
-                  href="mailto:info@jaysonstreeservice.com" 
+                <a
+                  href="mailto:jaysontreeservice@gmail.com"
                   className="block AvantBold text-sm sm:text-base text-[#0F0F0F] hover:text-[#6DC642] transition-colors break-all"
                 >
-                  📧 info@jaysonstreeservice.com
+                  📧 jaysontreeservice@gmail.com
                 </a>
                 <div className="pt-3 mt-3 border-t border-[#6DC642]/20 space-y-2">
                   <div className="flex items-center gap-2">
