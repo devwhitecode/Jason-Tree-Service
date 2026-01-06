@@ -140,13 +140,13 @@ const AboutPage = () => {
           src={mwp3}
           alt=""
           aria-hidden="true"
-          className="leaf-float hidden sm:block absolute bottom-[12%] sm:bottom-[15%] left-2 sm:left-[8%] w-16 sm:w-20 sm:w-28 opacity-15 scroll-animate fade-rotate transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-105"
+          className="leaf-float hidden sm:block absolute bottom-[12%] sm:bottom-[15%] -left-2 sm:left-[0%] w-16 sm:w-20 sm:w-28 opacity-15 scroll-animate fade-rotate transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-105"
         />
         <img
           src={mwp3}
           alt=""
           aria-hidden="true"
-          className="leaf-float hidden sm:block absolute bottom-[12%] sm:bottom-[15%] right-2 sm:right-[8%] w-16 sm:w-20 sm:w-28 opacity-15 scroll-animate fade-rotate transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-105"
+          className="leaf-float hidden sm:block absolute bottom-[12%] sm:bottom-[15%] right-0 sm:right-[2%] w-16 sm:w-20 sm:w-28 opacity-15 scroll-animate fade-rotate transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-105"
         />
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           <div className="group relative bg-white/60 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-200/50">
@@ -411,7 +411,7 @@ const AboutPage = () => {
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <p className="AvantBold text-sm sm:text-base text-[#0F0F0F]">California State License #XXXXXX</p>
+                <p className="AvantBold text-sm sm:text-base text-[#0F0F0F]">CA STATE LIC #1104641</p>
               </div>
               <div className="bg-white/60 backdrop-blur-sm p-4 rounded-xl flex items-center gap-3 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-gray-200/50">
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#6DC642] to-[#5AB032] flex items-center justify-center flex-shrink-0 shadow-md">

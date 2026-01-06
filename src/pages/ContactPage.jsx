@@ -166,8 +166,8 @@ const ContactPage = () => {
                   <p className="AvantLight text-xs text-[#0F0F0F] opacity-70">
                     ✓ Licensed • Insured • Bonded
                   </p>
-                  <p className="AvantBold text-xs text-[#0F0F0F] opacity-70">
-                    License #1104641
+                  <p className="AvantBold text-sm text-[#0F0F0F]">
+                    CA STATE LIC #1104641
                   </p>
                 </div>
               </div>

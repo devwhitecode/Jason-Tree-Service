@@ -153,7 +153,7 @@ const Footer = ({ onNavigate }) => (
             Book your free estimate and get fast, reliable tree care for
             your home or commercial property.
           </p>
-          <p className="AvantLight text-xs mt-2">License #1104641</p>
+          <p className="AvantBold text-base mt-2">CA STATE LIC #1104641</p>
         </div>
         <a
           href="#contact-form"

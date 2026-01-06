@@ -65,7 +65,7 @@ const WhyChooseSection = ({ heading, highlighted, bodyDesktop, bodyMobile, image
       <img
         src={leafTwo}
         alt=""
-        className={`w-28 absolute top-[38%] left-0 z-[9999] cursor-pointer touch-none ${
+        className={`hidden sm:block w-28 absolute top-[38%] left-0 z-[9999] cursor-pointer touch-none ${
           isVisible
             ? "opacity-100 translate-x-0 rotate-0"
             : "opacity-0 -translate-x-12 -rotate-45"
